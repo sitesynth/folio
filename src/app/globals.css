@@ -5,6 +5,7 @@
 :root { --ink: #1c1b18; --paper: #f8f6f1; --line: rgba(25,24,23,.16); --muted: #6b6a63; --accent-green: #6d7a5c; }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); }
+nextjs-portal { display: none !important; }
 body { color: var(--ink); font-family: "Geist Local", Arial, sans-serif; }
 button { font: inherit; }
 @font-face { font-family: "Geist Local"; src: url("/fonts/Geist.ttf") format("truetype"); font-display: swap; }
