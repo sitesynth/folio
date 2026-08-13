@@ -160,7 +160,7 @@ function extractContent(page: PageData): ContentModel {
     headerLeft: headerLeft || "SOFIIA VAN DER VIR · PORTFOLIO 2026",
     headerRight,
     footerLeft: footerLeft || projectCaptionFor(page.page),
-    footerRight: footerRight || String(page.page).padStart(2, "0"),
+    footerRight: footerRight || `${String(page.page).padStart(2, "0")} / ${TOTAL_PAGES}`,
     eyebrow,
     title,
     paras,
@@ -332,7 +332,7 @@ function AboutSlide({ page }: { page: PageData }) {
         </div>
         {hero && <img className="about-portrait" src={hero} alt="Sofiia Van der Vir" />}
       </div>
-      <PageBar left="SOFIIA VAN DER VIR" right="03 / 20" />
+      <PageBar left="SOFIIA VAN DER VIR" right={`03 / ${TOTAL_PAGES}`} />
     </div>
   );
 }
@@ -381,7 +381,7 @@ const OPENER_2: OpenerData = {
     ["GESCHOSSIGKEIT", "4 Geschosse + Satteldach"],
   ],
   footerLeft: "LIVING IN A PROMINENT LOCATION",
-  footerRight: "01",
+  footerRight: "01 / 06",
 };
 
 const OPENER_3: OpenerData = {
@@ -400,7 +400,7 @@ const OPENER_3: OpenerData = {
     ["AUSZEICHNUNG", "1. Platz · Wettbewerb Stadt Krefeld"],
   ],
   footerLeft: "HALLE FUER ALLE",
-  footerRight: "01",
+  footerRight: "01 / 07",
 };
 
 function OpenerSlide({ page, data }: { page: PageData; data: OpenerData }) {
