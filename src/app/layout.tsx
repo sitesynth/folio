@@ -13,7 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3003"),
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3003"
+  ),
   title: "Sofiia Van der Vir — Architektur Portfolio 2026",
   description: "Architekturportfolio von Sofiia Van der Vir — Frauentherapiezentrum Lüssow, Stadtbad Krefeld, Wohnungsbau Stolberg.",
   openGraph: {
