@@ -1,0 +1,4 @@
+{
+  "source": "../../docs/research/canva-portfolio/canva-recon-1-27.json",
+  "note": "Copied from browser reconnaissance. Text and image layers are reconstructed in React/CSS; Canva's original editor tree is not exposed by a public view link."
+}
