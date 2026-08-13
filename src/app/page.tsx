@@ -17,16 +17,54 @@ const FOOTER_PROJECT_CAPTIONS = [
   "SOFIIA VAN DER VIR",
 ];
 
+const TEXT_CORRECTIONS: Record<string, string> = {
+  "Das ProjektbefindetsichaufdemGeländeeinesehemaligenBahnhofs": "Das Projekt befindet sich auf dem Gelände eines ehemaligen Bahnhofs",
+  // Slide 15: merged word bug + continuation was split across two text nodes
+  "DasfünfeckigeGrundstückliegtzwischenzwei Straßen mit deutlich": "Das fünfeckige Grundstück liegt zwischen zwei Straßen mit deutlich unterschiedlichem Charakter.",
+  "unterschiedlichem Charakter.": "", // absorbed into the corrected node above
+};
+
+const TITLE_OVERRIDES: Record<number, string> = {
+  18: "ACCESS GALLERY",
+};
+
 function cleanText(value: string) {
-  return value.replace(/\s+/g, " ").trim();
+  const s = value.replace(/\s+/g, " ").trim();
+  return TEXT_CORRECTIONS[s] ?? s;
 }
 
 function imageUrl(src: string) {
   return (assets.manifest as Record<string, string>)[src];
 }
 
-function validRect(rect: { width: number; height: number; x: number; y: number }) {
-  return rect.width > 50 && rect.height > 50 && rect.x > -50 && rect.y > -50;
+// Canva design-element icons (≤1.3KB) — not real drawings; exclude from fallback rendering
+const ICON_FILENAMES = new Set([
+  "66c561f3-d7a6-4d2e-b152-efde3312c2f0.png",
+  "25f306b9-7ce3-481e-a2f1-598941ff5276.png",
+  "3f7027e4-aa35-4cd8-9e38-026a7e1a6970.png",
+  "0a4253da-15b8-468f-83a1-837d7837f142.png",
+  "7123ad67-4853-4ecc-b162-92987e3cacdf.png",
+  "8df7756b-223a-4d50-bd5b-3759385cc2a3.png",
+  "6f4902e5-6b46-49e3-bf87-62c20e87080a.png",
+  "03a1858d-a5da-4e0e-b6c4-73b5822b998f.png",
+  "4d95d90e-faaf-4848-bb16-096f286acdb5.png",
+  "5a022654-5b8b-4063-97a9-f8f0ad166c05.png",
+  "980d84d9-aa03-4705-bd0c-c97c4d74562f.png",
+  "9f76f635-0740-4b42-af44-d512be29d9d6.png",
+]);
+
+function isLocalUrl(url: string | undefined) {
+  return !!url && url.startsWith("/") && !url.startsWith("//");
+}
+
+function isIconUrl(url: string | undefined) {
+  if (!url) return false;
+  const filename = url.split("/").pop() ?? "";
+  return ICON_FILENAMES.has(filename);
+}
+
+function validRect(rect: { width: number; height: number; x: number; y: number }, xMin = -50) {
+  return rect.width > 50 && rect.height > 50 && rect.x > xMin && rect.y > -50;
 }
 
 function isLabelLike(s: string) {
@@ -162,7 +200,7 @@ function extractContent(page: PageData): ContentModel {
     footerLeft: footerLeft || projectCaptionFor(page.page),
     footerRight: footerRight || `${String(page.page).padStart(2, "0")} / ${TOTAL_PAGES}`,
     eyebrow,
-    title,
+    title: TITLE_OVERRIDES[page.page] ?? title,
     paras,
     listHeading,
     rows,
@@ -172,13 +210,35 @@ function extractContent(page: PageData): ContentModel {
 function ImageLayer({ page, max = 14 }: { page: PageData; max?: number }) {
   const vw = page.viewport?.width || 1440;
   const vh = page.viewport?.height || 900;
-  const images = page.images.filter((img: ImageNode) => imageUrl(img.src) && validRect(img.rect)).slice(0, max);
+  // Slide 09 has a wide section drawing starting slightly off-screen left (x≈-162)
+  const xMin = page.page === 9 ? -200 : -50;
+
+  const positioned = page.images
+    .filter((img: ImageNode) => imageUrl(img.src) && validRect(img.rect, xMin))
+    .slice(0, max);
+
+  // Slides confirmed to have visuals that the scraper missed (blob: URLs not captured)
+  const NEEDS_FALLBACK_IMAGES = new Set([13, 23]);
+
+  // When scraper missed rect data but files exist locally, show them as a panel grid
+  const fallbacks = (positioned.length === 0 && NEEDS_FALLBACK_IMAGES.has(page.page))
+    ? page.images
+        .filter((img: ImageNode) => {
+          const url = imageUrl(img.src);
+          return isLocalUrl(url) && !isIconUrl(url) && !validRect(img.rect);
+        })
+        .filter((img, i, arr) => arr.findIndex(x => x.src === img.src) === i) // dedupe by src
+        .slice(0, 4)
+    : [];
+
+  const cols = fallbacks.length > 2 ? 2 : 1;
+
   return (
     <div className="image-layer" aria-hidden="true">
-      {images.map((img: ImageNode, i: number) => (
+      {positioned.map((img: ImageNode, i: number) => (
         <img
           key={`${img.src}-${i}`}
-          src={imageUrl(img.src)}
+          src={imageUrl(img.src)!}
           alt={img.alt || ""}
           className="image-plate"
           style={{
@@ -189,6 +249,25 @@ function ImageLayer({ page, max = 14 }: { page: PageData; max?: number }) {
           }}
         />
       ))}
+      {fallbacks.length > 0 && (
+        <div style={{
+          position: "absolute",
+          left: "46%", top: "0", right: "0", bottom: "0",
+          display: "grid",
+          gridTemplateColumns: `repeat(${cols}, 1fr)`,
+          gridTemplateRows: fallbacks.length > cols ? `repeat(${Math.ceil(fallbacks.length / cols)}, 1fr)` : "1fr",
+          gap: "3px",
+        }}>
+          {fallbacks.map((img: ImageNode, i: number) => (
+            <img
+              key={`fb-${img.src}-${i}`}
+              src={imageUrl(img.src)!}
+              alt={img.alt || ""}
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -404,9 +483,31 @@ const OPENER_3: OpenerData = {
 };
 
 function OpenerSlide({ page, data }: { page: PageData; data: OpenerData }) {
-  const hero = page.images.filter((i: ImageNode) => imageUrl(i.src) && validRect(i.rect)).sort((a, b) => b.rect.width * b.rect.height - a.rect.width * a.rect.height)[0];
   const vw = page.viewport?.width || 1440;
   const vh = page.viewport?.height || 900;
+
+  const positionedHero = page.images
+    .filter((i: ImageNode) => imageUrl(i.src) && validRect(i.rect))
+    .sort((a, b) => b.rect.width * b.rect.height - a.rect.width * a.rect.height)[0];
+
+  // Fallback: use first local non-icon image if scraper missed rect data
+  const fallbackHero = !positionedHero
+    ? page.images.find((i: ImageNode) => {
+        const url = imageUrl(i.src);
+        return isLocalUrl(url) && !isIconUrl(url) && !validRect(i.rect);
+      })
+    : undefined;
+
+  const hero = positionedHero ?? fallbackHero;
+  const heroStyle = positionedHero
+    ? {
+        left: `${(positionedHero.rect.x / vw) * 100}%`,
+        top: `${(positionedHero.rect.y / vh) * 100}%`,
+        width: `${(positionedHero.rect.width / vw) * 100}%`,
+        height: `${(positionedHero.rect.height / vh) * 100}%`,
+      }
+    : { left: "48%", top: "10%", width: "49%", height: "80%" };
+
   return (
     <div className="content-page opener-slide">
       <PageBar left={data.headerLeft} right={data.headerRight} top />
@@ -428,14 +529,9 @@ function OpenerSlide({ page, data }: { page: PageData; data: OpenerData }) {
         {hero && (
           <img
             className="opener-hero"
-            src={imageUrl(hero.src)}
+            src={imageUrl(hero.src)!}
             alt={hero.alt || ""}
-            style={{
-              left: `${(hero.rect.x / vw) * 100}%`,
-              top: `${(hero.rect.y / vh) * 100}%`,
-              width: `${(hero.rect.width / vw) * 100}%`,
-              height: `${(hero.rect.height / vh) * 100}%`,
-            }}
+            style={heroStyle}
           />
         )}
       </div>
