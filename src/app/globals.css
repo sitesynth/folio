@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-:root { --ink: #1c1b18; --paper: #ffffff; --line: rgba(25,24,23,.16); --muted: #6b6a63; --accent-green: #6d7a5c; }
+:root { --ink: #1c1b18; --paper: #f8f6f1; --line: rgba(25,24,23,.16); --muted: #6b6a63; --accent-green: #6d7a5c; }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); }
 nextjs-portal { display: none !important; }
@@ -16,42 +16,58 @@ button { font: inherit; }
 .slides-scroller::-webkit-scrollbar { display: none; }
 .slides-scroller > div { height: 100dvh; scroll-snap-align: start; scroll-snap-stop: always; }
 .slides-scroller > div:not(:last-child) { border-bottom: 14px solid #1a1917; }
-.portfolio-slide { height: 100%; padding: 0; background: #1a1917; color: var(--ink); }
+.portfolio-slide { height: 100%; padding: 0; background: #fff; color: var(--ink); }
 .slide-canvas { height: 100%; width: 100%; position: relative; overflow: hidden; isolation: isolate; background: var(--paper); }
 
-/* PDF slide — cover fill + overlay bars */
-.pdf-slide-wrap { position: relative; height: 100%; width: 100%; overflow: hidden; background: #fff; }
-.pdf-slide-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-
-/* Header / footer overlay bars — sit on top of the image, cover PDF chrome */
-.slide-bar {
-  position: absolute; left: 0; right: 0; z-index: 2;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 clamp(16px, 4.4%, 60px);
-  background: #fff;
-  font-family: "Geist Local", Arial, sans-serif;
-  font-size: clamp(.52rem, .6vw, .68rem);
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  height: 7%;  /* ≈ 45/810 of PDF page + buffer for full coverage */
+/* Pixel-accurate PDF page render — text/images positioned in % extracted from the source PDF */
+/* Width is calc(100% - 4.5rem) to leave clearance for the fixed progress rail on the right */
+.pdf-page-outer { position: relative; height: 100%; width: calc(100% - 4.5rem); overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center; }
+.pdf-page-scaler {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  container-type: inline-size;
 }
-.slide-bar-top { top: 0; border-bottom: 1px solid var(--line); }
-.slide-bar-bottom { bottom: 0; border-top: 1px solid var(--line); }
-.slide-bar-blank { background: #fff; }
+/* inset: 1.5% 0 gives breathing room so header/footer don't press the slide edge */
+.pdf-page { position: absolute; inset: 1.5% 0; }
+/* cover bleeds to edges — no inset */
+.cover-slide { inset: 0; }
+.pdf-page span { display: block; }
 
-/* Cover left and right edges to hide PDF design artifacts */
-.pdf-slide-wrap::before,
-.pdf-slide-wrap::after {
-  content: ''; position: absolute; top: 0; bottom: 0; width: 6px; z-index: 3; background: #fff;
+/* Cover slide — hand-tuned from exact PDF-extracted coordinates */
+.cover-slide .cover-label { font-family: var(--font-inter), Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; white-space: nowrap; }
+.cover-slide .cover-title { font-family: var(--font-cormorant), Georgia, serif; font-weight: 500; line-height: 1; white-space: nowrap; }
+.cover-slide .cover-name { font-family: var(--font-cormorant), Georgia, serif; font-style: italic; white-space: nowrap; }
+.cover-slide .cover-year { font-family: var(--font-inter), Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
+.cover-slide .cover-rule { position: absolute; left: 7.27%; top: 79.4%; width: 11.47%; height: .18%; background: #7d9478; }
+
+/* Unified topbar — one component, one CSS, all slides identical */
+.slide-topbar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6.5%;
+  pointer-events: none;
+  z-index: 2;
 }
-.pdf-slide-wrap::before { left: 0; }
-.pdf-slide-wrap::after  { right: 0; }
+.topbar-name,
+.topbar-label {
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 0.74cqw;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 400;
+}
+.topbar-name { color: #1a1a1a; }
+.topbar-label { color: #6a6a6a; }
 
-/* Tall top bar (has image caption below section name) */
-.slide-bar-tall { height: auto; min-height: 6.1%; padding-top: 1.4% ; padding-bottom: 1.4%; align-items: flex-start; }
-.bar-right-col { display: flex; flex-direction: column; align-items: flex-end; gap: .5em; }
-.bar-img-caption { font-size: clamp(.48rem, .54vw, .6rem); letter-spacing: .08em; color: var(--muted); opacity: .75; }
+/* Full-width hairline rules (headers, footers, table rows) — measured from PDF, not vector-extractable */
+.page-rule { position: absolute; left: 6.27%; width: 87.43%; height: 1px; background: var(--line); }
 .grain { position: absolute; inset: 0; z-index: 5; opacity: .035; pointer-events: none; mix-blend-mode: multiply; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E"); }
 
 /* Serif / label vocabulary */
@@ -91,6 +107,7 @@ button { font: inherit; }
 .cover-page .cover-rule { position: absolute; left: 7%; top: 76%; }
 .cover-name { position: absolute; left: 7%; top: 80%; font-style: italic; font-size: clamp(.95rem, 1.5vw, 1.55rem); color: var(--accent-green); font-family: Georgia, serif; }
 .cover-hero { position: absolute; right: 12%; top: 15%; width: 25%; height: 68%; object-fit: cover; }
+.cover-year { position: absolute; right: 6.5%; bottom: 1.8%; font-size: .65rem; letter-spacing: .12em; color: var(--muted); }
 
 /* Index */
 .index-body { position: relative; flex: 1 1 auto; padding: 3% 7% 0; }
@@ -124,20 +141,6 @@ button { font: inherit; }
 .opener-dl-row dd { margin: 0; }
 .opener-hero { position: absolute; z-index: 0; object-fit: cover; }
 
-/* Slide 07: DORF · HOF · HEILUNG concept diagram */
-.p7-body { position: relative; flex: 1 1 auto; display: flex; gap: 4%; padding: 2.2% 0; min-height: 0; }
-.p7-text { flex: 0 0 44%; max-width: 44%; display: flex; flex-direction: column; min-height: 0; }
-.p7-photo { margin-top: auto; width: 100%; max-height: 42%; object-fit: cover; }
-.p7-diagram-col { flex: 1 1 auto; display: flex; flex-direction: column; align-items: flex-end; min-height: 0; }
-.p7-diagram-frame { flex: 1 1 auto; min-height: 0; width: 100%; display: flex; justify-content: flex-end; }
-.p7-diagram { max-width: 82%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
-.p7-rows { flex: 0 0 auto; width: 60%; display: flex; flex-direction: column; gap: .5rem; margin: 1rem 0; }
-.p7-row { display: flex; align-items: baseline; gap: .8rem; }
-.p7-row dt { font-weight: 700; font-size: clamp(.62rem, .76vw, .78rem); letter-spacing: .07em; color: var(--accent-green); width: 4.5rem; flex: 0 0 auto; margin: 0; }
-.p7-row dd { margin: 0; font-family: Georgia, "DM Serif", "Times New Roman", serif; font-size: clamp(.85rem, 1.1vw, 1.05rem); }
-.p7-icons-frame { flex: 0 0 15%; width: 100%; display: flex; justify-content: flex-end; }
-.p7-icons { max-width: 60%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
-
 /* Contact */
 .contact-page { height: 100%; display: grid; grid-template-columns: 38% 62%; }
 .contact-left { position: relative; background: #efece4; padding: 8% 8% 0; display: flex; flex-direction: column; }
@@ -153,28 +156,41 @@ button { font: inherit; }
 .contact-dl-row dd { margin: 0; font-size: clamp(.8rem, 1vw, 1rem); }
 .contact-footnote { margin-top: auto; padding-top: 4%; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 
-/* Progress rail */
-.progress-rail { position: fixed; z-index: 20; top: 50%; right: 1.8rem; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; gap: .75rem; color: var(--muted); }
-.rail-label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .45rem; letter-spacing: .16em; opacity: .55; font-family: "Geist Local", Arial, sans-serif; }
-.rail-current { font-family: "DM Serif", Georgia, serif; font-size: 1.3rem; color: var(--ink); opacity: .75; }
+/* Progress rail / nav */
+.progress-rail { position: fixed; z-index: 20; top: 50%; right: 1.8rem; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; gap: .75rem; color: #f3f0e9; mix-blend-mode: difference; }
+.rail-label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .48rem; letter-spacing: .16em; opacity: .7; }
+.rail-current { font-family: "DM Serif", Georgia, serif; font-size: 1.4rem; }
 .rail-dots { display: flex; flex-direction: column; gap: 5px; max-height: 44vh; overflow: hidden; }
-.rail-dots button { width: 5px; height: 5px; padding: 0; border: 0; border-radius: 50%; background: var(--muted); opacity: .3; cursor: pointer; transition: transform .25s ease, opacity .25s ease; }
+.rail-dots button { width: 5px; height: 5px; padding: 0; border: 0; border-radius: 50%; background: currentColor; opacity: .35; cursor: pointer; transition: transform .25s ease, opacity .25s ease; }
 .rail-dots button.current { opacity: 1; transform: scale(1.8); }
 
-/* PDF button under dots */
-@keyframes pdf-bounce {
-  0%,100% { transform: translateY(0); }
-  40%      { transform: translateY(-6px); }
-  70%      { transform: translateY(-2px); }
-}
-.rail-pdf-btn {
-  display: flex; align-items: center; justify-content: center;
-  color: var(--muted); opacity: .45; text-decoration: none;
-  transition: opacity .2s; padding: .3rem 0;
-}
+/* PDF download link — bottom of progress rail */
+.rail-pdf-btn { display: flex; align-items: center; justify-content: center; width: 1.4rem; height: 1.4rem; opacity: 0.5; color: inherit; text-decoration: none; transition: opacity .2s; }
 .rail-pdf-btn:hover { opacity: 1; }
-.rail-pdf-btn:hover svg { animation: pdf-bounce .5s ease; }
-.rail-pdf-btn svg { width: 1.5rem; height: 1.5rem; }
+.rail-pdf-btn svg { width: 100%; height: 100%; }
+.rail-page-counter { position: fixed; bottom: 1.4rem; right: 1.4rem; font-size: .6rem; letter-spacing: .1em; opacity: .75; white-space: nowrap; color: #f3f0e9; mix-blend-mode: difference; }
+
+/* PDF / Print button — bottom-right of cover slide */
+@keyframes pdf-arrow {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%            { transform: translateY(4px); }
+}
+.pdf-btn {
+  position: absolute; right: 6.5%; bottom: 5%;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  width: 3rem; height: 3rem;
+  border-radius: 50%;
+  border: 1px solid rgba(107,106,99,.45);
+  justify-content: center;
+  background: none; cursor: pointer; padding: 0;
+  color: var(--muted);
+  opacity: 0.75;
+  transition: opacity .2s, border-color .2s, transform .15s;
+}
+.pdf-btn:hover { opacity: 1; border-color: var(--muted); }
+.pdf-btn:active { transform: scale(0.9); transition-duration: .05s; }
+.pdf-btn svg { width: 1.1rem; height: 1.1rem; animation: pdf-arrow 2.4s ease-in-out infinite; }
+.pdf-label { font-size: .42rem; letter-spacing: .12em; text-transform: uppercase; line-height: 1; }
 
 /* Fade-up entrance animation — elements start visible, animate on re-entry */
 .fade-up { transition: opacity .55s ease, transform .55s ease; }

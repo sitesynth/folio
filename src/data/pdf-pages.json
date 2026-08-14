@@ -1,0 +1,4945 @@
+[
+ {
+  "page": 1,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 31.30148270181219,
+    "left": 7.268518518518519,
+    "width": 43.888888888888886,
+    "height": 20.181219110378912,
+    "fontSize": 202.0,
+    "family": "AAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Architektur"
+   },
+   {
+    "top": 47.1993410214168,
+    "left": 7.268518518518519,
+    "width": 32.68518518518518,
+    "height": 20.181219110378912,
+    "fontSize": 202.0,
+    "family": "AAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "portfolio"
+   },
+   {
+    "top": 15.733113673805601,
+    "left": 7.268518518518519,
+    "width": 14.814814814814813,
+    "height": 2.224052718286656,
+    "fontSize": 22.0,
+    "family": "BAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "P O R T F O L I O   —   2 0 2 6"
+   },
+   {
+    "top": 83.19604612850083,
+    "left": 7.268518518518519,
+    "width": 15.0,
+    "height": 4.942339373970346,
+    "fontSize": 49.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#798a72",
+    "text": "Sofiia Van der Vir"
+   },
+   {
+    "top": 87.97364085667215,
+    "left": 90.04629629629629,
+    "width": 3.7037037037037033,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "DAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "M M X X V I"
+   }
+  ],
+  "images": [
+   {
+    "top": 16.88632619439868,
+    "left": 59.76851851851852,
+    "width": 25.64814814814815,
+    "height": 64.99176276771004,
+    "src": "/pdf-extract/p01-img0.png",
+    "pxW": 554.0,
+    "pxH": 789.0
+   }
+  ]
+ },
+ {
+  "page": 2,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 3.459637561779242,
+    "left": 6.25,
+    "width": 19.35185185185185,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "S O F I I A   V A N   D E R   V I R     ·     P O R T F O L I O   2 0 2 6"
+   },
+   {
+    "top": 3.459637561779242,
+    "left": 90.37037037037037,
+    "width": 3.3796296296296298,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "I N H A L T"
+   },
+   {
+    "top": 94.89291598023064,
+    "left": 6.25,
+    "width": 9.537037037037036,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "S O F I I A   V A N   D E R   V I R"
+   },
+   {
+    "top": 94.89291598023064,
+    "left": 90.41666666666667,
+    "width": 3.3333333333333335,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "0 2   /   2 0"
+   },
+   {
+    "top": 14.744645799011533,
+    "left": 6.25,
+    "width": 4.027777777777778,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "BAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "I N D E X"
+   },
+   {
+    "top": 18.369028006589787,
+    "left": 6.25,
+    "width": 12.777777777777777,
+    "height": 10.790774299835256,
+    "fontSize": 108.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Inhalt."
+   },
+   {
+    "top": 43.73970345963756,
+    "left": 6.25,
+    "width": 1.0648148148148149,
+    "height": 2.224052718286656,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "01"
+   },
+   {
+    "top": 42.66886326194398,
+    "left": 12.5,
+    "width": 7.777777777777778,
+    "height": 4.036243822075782,
+    "fontSize": 40.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Über mich"
+   },
+   {
+    "top": 44.398682042833606,
+    "left": 85.41666666666666,
+    "width": 8.333333333333332,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "Kontakt & Biografie"
+   },
+   {
+    "top": 52.96540362438221,
+    "left": 6.25,
+    "width": 1.2962962962962963,
+    "height": 2.224052718286656,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "02"
+   },
+   {
+    "top": 51.97693574958814,
+    "left": 12.5,
+    "width": 23.055555555555557,
+    "height": 4.036243822075782,
+    "fontSize": 40.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Frauentherapiezentrum Lüssow"
+   },
+   {
+    "top": 53.62438220757826,
+    "left": 77.03703703703704,
+    "width": 16.712962962962962,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "Therapiezentrum für Flüchtlingsfrauen"
+   },
+   {
+    "top": 62.27347611202636,
+    "left": 6.25,
+    "width": 1.2962962962962963,
+    "height": 2.224052718286656,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "03"
+   },
+   {
+    "top": 61.20263591433278,
+    "left": 12.5,
+    "width": 25.0,
+    "height": 4.036243822075782,
+    "fontSize": 40.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Stadtbad Krefeld — Halle für Alle"
+   },
+   {
+    "top": 62.932454695222404,
+    "left": 77.26851851851852,
+    "width": 16.48148148148148,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "Umbau eines historischen Stadtbades"
+   },
+   {
+    "top": 71.49917627677101,
+    "left": 6.25,
+    "width": 1.2962962962962963,
+    "height": 2.224052718286656,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "04"
+   },
+   {
+    "top": 70.51070840197694,
+    "left": 12.5,
+    "width": 10.092592592592593,
+    "height": 4.036243822075782,
+    "fontSize": 40.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Apartment 61"
+   },
+   {
+    "top": 72.15815485996706,
+    "left": 79.16666666666666,
+    "width": 14.583333333333334,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "Wohnprojekt — Innenraumdesign"
+   },
+   {
+    "top": 80.80724876441515,
+    "left": 6.25,
+    "width": 1.25,
+    "height": 2.224052718286656,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "05"
+   },
+   {
+    "top": 79.73640856672158,
+    "left": 12.5,
+    "width": 12.453703703703704,
+    "height": 4.036243822075782,
+    "fontSize": 40.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Weitere Projekte"
+   },
+   {
+    "top": 81.4662273476112,
+    "left": 79.9074074074074,
+    "width": 13.842592592592592,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "Auswahl studentischer Arbeiten"
+   }
+  ],
+  "images": []
+ },
+ {
+  "page": 3,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 3.459637561779242,
+    "left": 6.25,
+    "width": 19.35185185185185,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "S O F I I A   V A N   D E R   V I R     ·     P O R T F O L I O   2 0 2 6"
+   },
+   {
+    "top": 3.459637561779242,
+    "left": 87.36111111111111,
+    "width": 6.388888888888888,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "0 2   ·   P R O J E K T"
+   },
+   {
+    "top": 94.89291598023064,
+    "left": 6.25,
+    "width": 9.537037037037036,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "S O F I I A   V A N   D E R   V I R"
+   },
+   {
+    "top": 94.89291598023064,
+    "left": 90.41666666666667,
+    "width": 3.3333333333333335,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "0 3   /   2 0"
+   },
+   {
+    "top": 14.744645799011533,
+    "left": 6.25,
+    "width": 1.2962962962962963,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "0 1"
+   },
+   {
+    "top": 27.677100494233937,
+    "left": 6.25,
+    "width": 8.518518518518519,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Ausbildung"
+   },
+   {
+    "top": 34.596375617792425,
+    "left": 6.25,
+    "width": 7.314814814814814,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "2016-2023 "
+   },
+   {
+    "top": 38.63261943986821,
+    "left": 6.25,
+    "width": 17.5,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Fachhochschule Aachen"
+   },
+   {
+    "top": 42.58649093904448,
+    "left": 6.25,
+    "width": 21.203703703703702,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Bachelor of Arts Architektur"
+   },
+   {
+    "top": 47.61120263591433,
+    "left": 6.25,
+    "width": 20.694444444444443,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Bachelorarbeit bei Prof. Dipl.-Ing. Ulrich Eckey: "
+   },
+   {
+    "top": 50.24711696869851,
+    "left": 6.25,
+    "width": 27.73148148148148,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Die markante Ecke - Zwischen öffentlichem Raum und privatem"
+   },
+   {
+    "top": 52.80065897858319,
+    "left": 6.25,
+    "width": 3.7962962962962963,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Rückzug"
+   },
+   {
+    "top": 58.154859967051074,
+    "left": 6.25,
+    "width": 7.361111111111112,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "2023-2025 "
+   },
+   {
+    "top": 62.191103789126856,
+    "left": 6.25,
+    "width": 19.76851851851852,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Fachhochschule Düsseldorf"
+   },
+   {
+    "top": 66.14497528830313,
+    "left": 6.25,
+    "width": 23.65740740740741,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Master of Arts Innenarchitektur"
+   },
+   {
+    "top": 71.16968698517299,
+    "left": 6.25,
+    "width": 23.65740740740741,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Masterarbeit bei Prof. Dipl.-Ing. Christiane Ern-Heinzl: "
+   },
+   {
+    "top": 73.72322899505767,
+    "left": 6.25,
+    "width": 26.435185185185183,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Healing Architecture Schutz- und Therapiestätten für kriegs-"
+   },
+   {
+    "top": 76.35914332784185,
+    "left": 6.25,
+    "width": 9.25925925925926,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "traumatisierte Frauen"
+   },
+   {
+    "top": 27.677100494233937,
+    "left": 43.47222222222222,
+    "width": 6.527777777777779,
+    "height": 4.036243822075782,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Software"
+   },
+   {
+    "top": 34.67874794069193,
+    "left": 43.47222222222222,
+    "width": 6.7592592592592595,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "AVA-Software"
+   },
+   {
+    "top": 37.23228995057661,
+    "left": 43.47222222222222,
+    "width": 3.1018518518518516,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "ORCA "
+   },
+   {
+    "top": 41.18616144975288,
+    "left": 43.47222222222222,
+    "width": 9.12037037037037,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "BIM & 2D Software "
+   },
+   {
+    "top": 43.65733113673805,
+    "left": 43.47222222222222,
+    "width": 2.361111111111111,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Revit"
+   },
+   {
+    "top": 46.45799011532125,
+    "left": 43.47222222222222,
+    "width": 6.203703703703703,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Vectorworks "
+   },
+   {
+    "top": 49.25864909390445,
+    "left": 43.47222222222222,
+    "width": 4.583333333333333,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "ArchiCAD"
+   },
+   {
+    "top": 53.212520593080725,
+    "left": 43.47222222222222,
+    "width": 6.111111111111111,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "3D Software "
+   },
+   {
+    "top": 55.766062602965405,
+    "left": 43.47222222222222,
+    "width": 10.416666666666668,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Rhinoceros SketchUP "
+   },
+   {
+    "top": 58.48434925864909,
+    "left": 43.47222222222222,
+    "width": 8.333333333333332,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "BIM & Parametrik "
+   },
+   {
+    "top": 61.28500823723228,
+    "left": 43.47222222222222,
+    "width": 6.296296296296296,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Grasshopper "
+   },
+   {
+    "top": 65.23887973640856,
+    "left": 43.47222222222222,
+    "width": 6.805555555555555,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Visualisierung "
+   },
+   {
+    "top": 67.79242174629324,
+    "left": 43.47222222222222,
+    "width": 4.305555555555555,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Enscape "
+   },
+   {
+    "top": 70.59308072487644,
+    "left": 43.47222222222222,
+    "width": 5.7407407407407405,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Twinmotion "
+   },
+   {
+    "top": 74.54695222405272,
+    "left": 43.47222222222222,
+    "width": 7.361111111111112,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Bildbearbeitung"
+   },
+   {
+    "top": 77.0181219110379,
+    "left": 43.47222222222222,
+    "width": 14.212962962962964,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#1a1a1a",
+    "text": "Illustrator Photoshop Indesign "
+   },
+   {
+    "top": 18.451400329489292,
+    "left": 6.25,
+    "width": 5.5092592592592595,
+    "height": 2.471169686985173,
+    "fontSize": 25.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#6a6a6a",
+    "text": "Über mich"
+   }
+  ],
+  "images": [
+   {
+    "top": 13.344316309719934,
+    "left": 63.657407407407405,
+    "width": 30.74074074074074,
+    "height": 82.04283360790774,
+    "src": "/pdf-extract/p03-img0.jpg",
+    "pxW": 664.0,
+    "pxH": 996.0
+   }
+  ]
+ },
+ {
+  "page": 4,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 87.73148148148148,
+    "width": 6.064814814814815,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "PROJEKTAUFTAKT"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 12.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 12.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "01 / 07"
+   },
+   {
+    "top": 17.215815485996703,
+    "left": 6.203703703703703,
+    "width": 27.916666666666668,
+    "height": 1.4827018121911038,
+    "fontSize": 16.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "THERAPIE- UND WOHNZENTRUM FÜR FRAUEN · LÜSSOW · JUNI 2025"
+   },
+   {
+    "top": 19.192751235584844,
+    "left": 6.203703703703703,
+    "width": 38.425925925925924,
+    "height": 6.672158154859967,
+    "fontSize": 70.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "DORF, HOF, HEILUNG"
+   },
+   {
+    "top": 26.935749588138385,
+    "left": 6.203703703703703,
+    "width": 35.27777777777778,
+    "height": 2.14168039538715,
+    "fontSize": 23.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "TherapiezentrumfürgeflüchteteFrauenim ländlichen Dorf Lüssow in"
+   },
+   {
+    "top": 29.57166392092257,
+    "left": 6.203703703703703,
+    "width": 14.398148148148149,
+    "height": 2.14168039538715,
+    "fontSize": 23.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Mecklenburg-Vorpommern."
+   },
+   {
+    "top": 46.04612850082373,
+    "left": 6.203703703703703,
+    "width": 4.166666666666666,
+    "height": 1.400329489291598,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "STANDORT"
+   },
+   {
+    "top": 49.67051070840198,
+    "left": 6.203703703703703,
+    "width": 2.7777777777777777,
+    "height": 1.400329489291598,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "DATUM"
+   },
+   {
+    "top": 53.37726523887974,
+    "left": 6.203703703703703,
+    "width": 4.814814814814815,
+    "height": 1.400329489291598,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "PROJEKTART"
+   },
+   {
+    "top": 57.084019769357496,
+    "left": 6.203703703703703,
+    "width": 7.962962962962964,
+    "height": 1.400329489291598,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "GEBÄUDEKATEGORIE"
+   },
+   {
+    "top": 60.70840197693575,
+    "left": 6.203703703703703,
+    "width": 6.527777777777779,
+    "height": 1.400329489291598,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "BAUMASSNAHME"
+   },
+   {
+    "top": 45.96375617792422,
+    "left": 18.88888888888889,
+    "width": 20.185185185185187,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Lüssow, Mecklenburg-Vorpommern, Deutschland"
+   },
+   {
+    "top": 49.588138385502475,
+    "left": 18.88888888888889,
+    "width": 3.8425925925925926,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Juni 2025"
+   },
+   {
+    "top": 53.13014827018122,
+    "left": 18.88888888888889,
+    "width": 16.34259259259259,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Therapie- und Wohnzentrum für Frauen"
+   },
+   {
+    "top": 56.75453047775947,
+    "left": 18.88888888888889,
+    "width": 16.712962962962962,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Soziale Architektur und Wohnarchitektur"
+   },
+   {
+    "top": 60.378912685337724,
+    "left": 18.88888888888889,
+    "width": 14.537037037037038,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Umnutzung und modularer Neubau"
+   },
+   {
+    "top": 50.0823723228995,
+    "left": 71.2037037037037,
+    "width": 12.731481481481483,
+    "height": 1.4827018121911038,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "PROJEKTBILD / VISUALISIERUNG"
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p04-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 34.2668863261944,
+    "left": 41.388888888888886,
+    "width": 52.96296296296297,
+    "height": 52.80065897858319,
+    "src": "/pdf-extract/p04-img1.png",
+    "pxW": 1144.0,
+    "pxH": 641.0
+   }
+  ]
+ },
+ {
+  "page": 5,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 81.94444444444444,
+    "width": 11.851851851851853,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "KONTEXT + SCHLÜSSELMERKMALE"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "02 / 07"
+   },
+   {
+    "top": 49.341021416803954,
+    "left": 43.28703703703704,
+    "width": 9.351851851851851,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SCHLÜSSELMERKMALE"
+   },
+   {
+    "top": 17.215815485996703,
+    "left": 6.203703703703703,
+    "width": 11.944444444444445,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "STÄDTEBAULICHER KONTEXT"
+   },
+   {
+    "top": 19.769357495881383,
+    "left": 6.203703703703703,
+    "width": 35.41666666666667,
+    "height": 5.848434925864909,
+    "fontSize": 61.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "ORT DES ANKOMMENS"
+   },
+   {
+    "top": 31.713344316309723,
+    "left": 6.296296296296296,
+    "width": 33.7037037037037,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Das ProjektbefindetsichaufdemGeländeeinesehemaligenBahnhofs"
+   },
+   {
+    "top": 34.18451400329489,
+    "left": 6.296296296296296,
+    "width": 13.750000000000002,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "im ländlichen Dorf Lüssow."
+   },
+   {
+    "top": 37.89126853377265,
+    "left": 6.203703703703703,
+    "width": 34.39814814814815,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Das alte Bahnhofsgebäude wird symbolisch als Ort des Ankommens und des"
+   },
+   {
+    "top": 40.11532125205931,
+    "left": 6.203703703703703,
+    "width": 35.92592592592593,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Übergangs weitergenutzt. Rund um den Bestand entsteht ein kleines, heilendes"
+   },
+   {
+    "top": 42.33937397034596,
+    "left": 6.203703703703703,
+    "width": 21.064814814814813,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Dorf aus Wohnen, Gemeinschaft und Therapie."
+   },
+   {
+    "top": 80.39538714991762,
+    "left": 44.9537037037037,
+    "width": 6.527777777777779,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Therapiehaus"
+   },
+   {
+    "top": 82.37232289950576,
+    "left": 44.9537037037037,
+    "width": 11.99074074074074,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Flexible Räume für Workshops,"
+   },
+   {
+    "top": 84.1845140032949,
+    "left": 44.9537037037037,
+    "width": 15.046296296296296,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Therapie und gemeinsame Aktivitäten."
+   },
+   {
+    "top": 60.13179571663921,
+    "left": 44.9537037037037,
+    "width": 7.12962962962963,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Heilendes Dorf"
+   },
+   {
+    "top": 62.108731466227354,
+    "left": 44.9537037037037,
+    "width": 14.351851851851851,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Wohnen, Gemeinschaft und Therapie"
+   },
+   {
+    "top": 63.92092257001647,
+    "left": 44.9537037037037,
+    "width": 16.064814814814817,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "werden räumlich miteinander verbunden."
+   },
+   {
+    "top": 73.64085667215815,
+    "left": 44.9537037037037,
+    "width": 9.444444444444445,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Gemeinschaftshaus"
+   },
+   {
+    "top": 75.61779242174629,
+    "left": 44.9537037037037,
+    "width": 13.101851851851851,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Ort für informellen Austausch und"
+   },
+   {
+    "top": 77.42998352553542,
+    "left": 44.9537037037037,
+    "width": 9.814814814814815,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "alltägliche Begegnungen."
+   },
+   {
+    "top": 66.88632619439868,
+    "left": 44.9537037037037,
+    "width": 9.768518518518517,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Modulare Hofhäuser"
+   },
+   {
+    "top": 68.86326194398681,
+    "left": 44.9537037037037,
+    "width": 15.50925925925926,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Geschützte, halbprivate Wohnräume für"
+   },
+   {
+    "top": 70.67545304777595,
+    "left": 44.9537037037037,
+    "width": 7.685185185185185,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "die Bewohnerinnen."
+   },
+   {
+    "top": 53.37726523887974,
+    "left": 44.9537037037037,
+    "width": 9.722222222222223,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#212120",
+    "text": "Ehemaliger Bahnhof"
+   },
+   {
+    "top": 55.35420098846787,
+    "left": 44.9537037037037,
+    "width": 8.287037037037038,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Symbolischer Ort des"
+   },
+   {
+    "top": 57.166392092257,
+    "left": 44.9537037037037,
+    "width": 12.777777777777777,
+    "height": 1.5650741350906094,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "Ankommens und des Übergangs."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p05-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 53.37726523887974,
+    "left": 43.379629629629626,
+    "width": 0.6018518518518519,
+    "height": 1.070840197693575,
+    "src": "/pdf-extract/p05-img1.png",
+    "pxW": 13.0,
+    "pxH": 13.0
+   },
+   {
+    "top": 60.13179571663921,
+    "left": 43.379629629629626,
+    "width": 0.6018518518518519,
+    "height": 1.070840197693575,
+    "src": "/pdf-extract/p05-img2.png",
+    "pxW": 13.0,
+    "pxH": 13.0
+   },
+   {
+    "top": 66.88632619439868,
+    "left": 43.379629629629626,
+    "width": 0.6018518518518519,
+    "height": 1.070840197693575,
+    "src": "/pdf-extract/p05-img3.png",
+    "pxW": 13.0,
+    "pxH": 13.0
+   },
+   {
+    "top": 73.64085667215815,
+    "left": 43.379629629629626,
+    "width": 0.6018518518518519,
+    "height": 1.070840197693575,
+    "src": "/pdf-extract/p05-img4.png",
+    "pxW": 13.0,
+    "pxH": 13.0
+   },
+   {
+    "top": 80.47775947281714,
+    "left": 43.379629629629626,
+    "width": 0.6018518518518519,
+    "height": 1.070840197693575,
+    "src": "/pdf-extract/p05-img5.png",
+    "pxW": 13.0,
+    "pxH": 13.0
+   },
+   {
+    "top": 9.71993410214168,
+    "left": 63.7962962962963,
+    "width": 36.43518518518519,
+    "height": 80.0658978583196,
+    "src": "/pdf-extract/p05-img6.png",
+    "pxW": 787.0,
+    "pxH": 972.0
+   },
+   {
+    "top": 49.42339373970346,
+    "left": 5.601851851851851,
+    "width": 36.388888888888886,
+    "height": 36.40856672158155,
+    "src": "/pdf-extract/p05-img7.png",
+    "pxW": 786.0,
+    "pxH": 442.0
+   }
+  ]
+ },
+ {
+  "page": 6,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 14.744645799011533,
+    "left": 6.25,
+    "width": 5.277777777777778,
+    "height": 2.059308072487644,
+    "fontSize": 20.0,
+    "family": "AAAAAA+Inter18pt",
+    "color": "#798a72",
+    "text": "M   1 : 5 0 0"
+   },
+   {
+    "top": 18.204283360790775,
+    "left": 6.25,
+    "width": 24.166666666666668,
+    "height": 5.848434925864909,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Lagerplanmodell"
+   },
+   {
+    "top": 6.095551894563426,
+    "left": 6.25,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 6.095551894563426,
+    "left": 86.94444444444444,
+    "width": 6.805555555555555,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "LAGERPLANMODELL"
+   },
+   {
+    "top": 92.58649093904448,
+    "left": 6.25,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 12.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.58649093904448,
+    "left": 91.66666666666666,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 12.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "02 / 07"
+   }
+  ],
+  "images": [
+   {
+    "top": 16.80395387149918,
+    "left": 28.703703703703702,
+    "width": 65.04629629629629,
+    "height": 74.54695222405272,
+    "src": "/pdf-extract/p06-img0.png",
+    "pxW": 1405.0,
+    "pxH": 905.0
+   }
+  ]
+ },
+ {
+  "page": 7,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 90.60185185185186,
+    "width": 3.194444444444444,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "KONZEPT"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "03 / 07"
+   },
+   {
+    "top": 17.298187808896213,
+    "left": 5.601851851851851,
+    "width": 12.916666666666668,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "ARCHITEKTONISCHES KONZEPT"
+   },
+   {
+    "top": 19.686985172981878,
+    "left": 5.601851851851851,
+    "width": 36.574074074074076,
+    "height": 6.013179571663921,
+    "fontSize": 63.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "DORF · HOF · HEILUNG"
+   },
+   {
+    "top": 26.441515650741348,
+    "left": 5.601851851851851,
+    "width": 38.425925925925924,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Das Projekt verbindet drei räumliche Prinzipien: das Dorf als überschaubare"
+   },
+   {
+    "top": 28.912685337726522,
+    "left": 5.601851851851851,
+    "width": 40.879629629629626,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Gemeinschaft, den Hof als geschützten Zwischenraum und Heilung als zentralen"
+   },
+   {
+    "top": 31.466227347611202,
+    "left": 5.601851851851851,
+    "width": 11.898148148148149,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Bestandteil des Alltags."
+   },
+   {
+    "top": 36.07907742998353,
+    "left": 5.601851851851851,
+    "width": 39.07407407407407,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Die Architektur soll keine institutionelle Atmosphäre erzeugen, sondern eine wohnliche"
+   },
+   {
+    "top": 38.303130148270185,
+    "left": 5.601851851851851,
+    "width": 42.87037037037037,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Umgebung mit klaren Übergängen zwischen privaten, gemeinschaftlichen und therapeutischen"
+   },
+   {
+    "top": 40.527182866556835,
+    "left": 5.601851851851851,
+    "width": 4.814814814814815,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Bereichen."
+   },
+   {
+    "top": 74.54695222405272,
+    "left": 53.93518518518518,
+    "width": 1.990740740740741,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "HOF"
+   },
+   {
+    "top": 67.62767710049424,
+    "left": 53.28703703703703,
+    "width": 2.5925925925925926,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "DORF"
+   },
+   {
+    "top": 81.79571663920923,
+    "left": 51.75925925925926,
+    "width": 4.166666666666666,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "HEILUNG"
+   },
+   {
+    "top": 73.97034596375617,
+    "left": 56.388888888888886,
+    "width": 3.6111111111111107,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "Schutz"
+   },
+   {
+    "top": 81.4662273476112,
+    "left": 56.388888888888886,
+    "width": 4.722222222222222,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "Therapie"
+   },
+   {
+    "top": 67.21581548599671,
+    "left": 56.388888888888886,
+    "width": 6.7592592592592595,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "Gemeinschaft"
+   },
+   {
+    "top": 61.779242174629324,
+    "left": 69.95370370370371,
+    "width": 6.805555555555555,
+    "height": 0.9060955518945634,
+    "fontSize": 10.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "MODULARE WOHNHÄUSER"
+   },
+   {
+    "top": 43.49258649093905,
+    "left": 70.87962962962962,
+    "width": 5.0,
+    "height": 0.8237232289950577,
+    "fontSize": 8.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "GEMEINSCHAFTSHAUS"
+   },
+   {
+    "top": 34.92586490939045,
+    "left": 78.14814814814814,
+    "width": 5.0,
+    "height": 0.8237232289950577,
+    "fontSize": 8.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "GEMEINSCHAFTSHAUS"
+   },
+   {
+    "top": 47.77594728171334,
+    "left": 83.7037037037037,
+    "width": 4.814814814814815,
+    "height": 0.9060955518945634,
+    "fontSize": 10.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "Therapie Zentrum "
+   },
+   {
+    "top": 18.28665568369028,
+    "left": 78.14814814814814,
+    "width": 6.805555555555555,
+    "height": 0.9060955518945634,
+    "fontSize": 10.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "MODULARE WOHNHÄUSER"
+   },
+   {
+    "top": 28.5831960461285,
+    "left": 63.93518518518518,
+    "width": 4.444444444444445,
+    "height": 0.9060955518945634,
+    "fontSize": 10.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "Begegnungsplatz"
+   },
+   {
+    "top": 37.56177924217463,
+    "left": 74.62962962962963,
+    "width": 2.7314814814814814,
+    "height": 0.9060955518945634,
+    "fontSize": 10.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d9478",
+    "text": "Spielplatz "
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p07-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 13.261943986820429,
+    "left": 58.56481481481482,
+    "width": 62.4537037037037,
+    "height": 54.94233937397035,
+    "src": "/pdf-extract/p07-img1.png",
+    "pxW": 1349.0,
+    "pxH": 667.0
+   },
+   {
+    "top": 45.799011532125206,
+    "left": 19.444444444444446,
+    "width": 72.82407407407408,
+    "height": 64.08566721581549,
+    "src": "/pdf-extract/p07-img2.png",
+    "pxW": 1573.0,
+    "pxH": 778.0
+   },
+   {
+    "top": 47.1169686985173,
+    "left": 5.601851851851851,
+    "width": 42.87037037037037,
+    "height": 42.915980230642504,
+    "src": "/pdf-extract/p07-img3.png",
+    "pxW": 926.0,
+    "pxH": 521.0
+   }
+  ]
+ },
+ {
+  "page": 8,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 88.42592592592592,
+    "width": 5.37037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "WOHNKONZEPT"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "04 / 07"
+   },
+   {
+    "top": 17.298187808896213,
+    "left": 6.203703703703703,
+    "width": 3.75,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "WOHNEN"
+   },
+   {
+    "top": 19.43986820428336,
+    "left": 6.203703703703703,
+    "width": 38.425925925925924,
+    "height": 5.848434925864909,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "MODULARE HOFHÄUSER"
+   },
+   {
+    "top": 26.02965403624382,
+    "left": 6.203703703703703,
+    "width": 42.129629629629626,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Die modularen Hofhäuser bieten sichere, halbprivate Wohnräume. Die Hofstruktur"
+   },
+   {
+    "top": 28.500823723228997,
+    "left": 6.203703703703703,
+    "width": 34.76851851851852,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "vermittelt zwischen Rückzug, Schutz und nachbarschaftlicher Nähe."
+   },
+   {
+    "top": 39.04448105436573,
+    "left": 6.203703703703703,
+    "width": 41.99074074074074,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Gemeinsam mit dem Bahnhof, dem Gemeinschaftshaus und dem Therapiehaus entsteht eine"
+   },
+   {
+    "top": 41.26853377265239,
+    "left": 6.203703703703703,
+    "width": 42.129629629629626,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "kleine dörfliche Struktur, die soziale Nähe ermöglicht und gleichzeitig private Rückzugsräume"
+   },
+   {
+    "top": 43.49258649093905,
+    "left": 6.203703703703703,
+    "width": 2.8703703703703702,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "wahrt."
+   },
+   {
+    "top": 48.51729818780889,
+    "left": 6.203703703703703,
+    "width": 6.712962962962964,
+    "height": 1.729818780889621,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "ZWEITE HAUT "
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p08-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 42.75123558484349,
+    "left": 3.009259259259259,
+    "width": 49.53703703703704,
+    "height": 46.45799011532125,
+    "src": "/pdf-extract/p08-img1.jpg",
+    "pxW": 1070.0,
+    "pxH": 564.0
+   },
+   {
+    "top": 13.673805601317957,
+    "left": 53.75,
+    "width": 38.75,
+    "height": 38.79736408566721,
+    "src": "/pdf-extract/p08-img2.png",
+    "pxW": 837.0,
+    "pxH": 471.0
+   },
+   {
+    "top": 50.494233937397034,
+    "left": 94.86111111111111,
+    "width": -44.074074074074076,
+    "height": 44.233937397034595,
+    "src": "/pdf-extract/p08-img3.jpg",
+    "pxW": -952.0,
+    "pxH": 537.0
+   }
+  ]
+ },
+ {
+  "page": 9,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 88.42592592592592,
+    "width": 5.37037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "WOHNKONZEPT"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "04 / 07"
+   },
+   {
+    "top": 17.298187808896213,
+    "left": 6.203703703703703,
+    "width": 3.75,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "WOHNEN"
+   },
+   {
+    "top": 19.43986820428336,
+    "left": 6.203703703703703,
+    "width": 38.425925925925924,
+    "height": 5.848434925864909,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "MODULARE HOFHÄUSER"
+   },
+   {
+    "top": 86.07907742998353,
+    "left": 38.88888888888889,
+    "width": 16.99074074074074,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "MODULARE WOHNSTRUKTUR / GRUNDRISS"
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p09-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 14.827018121911037,
+    "left": 54.35185185185185,
+    "width": 41.75925925925926,
+    "height": 77.1828665568369,
+    "src": "/pdf-extract/p09-img1.jpg",
+    "pxW": 902.0,
+    "pxH": 937.0
+   },
+   {
+    "top": 19.604612850082372,
+    "left": -11.203703703703702,
+    "width": 70.04629629629629,
+    "height": 70.18121911037892,
+    "src": "/pdf-extract/p09-img2.jpg",
+    "pxW": 1513.0,
+    "pxH": 852.0
+   }
+  ]
+ },
+ {
+  "page": 10,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 88.42592592592592,
+    "width": 5.37037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "WOHNKONZEPT"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "04 / 07"
+   },
+   {
+    "top": 17.298187808896213,
+    "left": 6.203703703703703,
+    "width": 3.75,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "WOHNEN"
+   },
+   {
+    "top": 19.43986820428336,
+    "left": 6.203703703703703,
+    "width": 38.425925925925924,
+    "height": 5.848434925864909,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "MODULARE HOFHÄUSER"
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p10-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 28.83031301482702,
+    "left": 69.81481481481482,
+    "width": 20.97222222222222,
+    "height": 27.924217462932454,
+    "src": "/pdf-extract/p10-img1.jpg",
+    "pxW": 453.0,
+    "pxH": 339.0
+   },
+   {
+    "top": 63.67380560131796,
+    "left": 69.81481481481482,
+    "width": 20.97222222222222,
+    "height": 24.794069192751238,
+    "src": "/pdf-extract/p10-img2.jpg",
+    "pxW": 453.0,
+    "pxH": 301.0
+   },
+   {
+    "top": 28.83031301482702,
+    "left": 38.93518518518518,
+    "width": 27.314814814814813,
+    "height": 59.637561779242176,
+    "src": "/pdf-extract/p10-img3.jpg",
+    "pxW": 590.0,
+    "pxH": 724.0
+   },
+   {
+    "top": 28.83031301482702,
+    "left": 9.212962962962964,
+    "width": 26.203703703703702,
+    "height": 59.637561779242176,
+    "src": "/pdf-extract/p10-img4.png",
+    "pxW": 566.0,
+    "pxH": 724.0
+   }
+  ]
+ },
+ {
+  "page": 11,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 13.097199341021417,
+    "left": 6.203703703703703,
+    "width": 6.435185185185185,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "GEMEINSCHAFT"
+   },
+   {
+    "top": 15.980230642504118,
+    "left": 6.203703703703703,
+    "width": 43.657407407407405,
+    "height": 5.354200988467875,
+    "fontSize": 56.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "ALLTÄGLICHE BEGEGNUNGEN"
+   },
+   {
+    "top": 21.25205930807249,
+    "left": 6.203703703703703,
+    "width": 20.64814814814815,
+    "height": 5.354200988467875,
+    "fontSize": 56.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "ALS THERAPIE"
+   },
+   {
+    "top": 31.87808896210873,
+    "left": 6.203703703703703,
+    "width": 41.388888888888886,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Das Gemeinschaftshaus ist vom italienischen Lavatoio pubblico inspiriert und als"
+   },
+   {
+    "top": 34.43163097199341,
+    "left": 6.203703703703703,
+    "width": 19.86111111111111,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Ort alltäglicher Begegnungen gedacht."
+   },
+   {
+    "top": 88.79736408566721,
+    "left": 6.203703703703703,
+    "width": 19.444444444444446,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "GEMEINSCHAFTSHAUS / SCHNITT / ATMOSPHÄRE"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 86.1574074074074,
+    "width": 7.638888888888889,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "GEMEINSCHAFTSHAUS"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "05 / 07"
+   },
+   {
+    "top": 37.973640856672155,
+    "left": 6.203703703703703,
+    "width": 40.23148148148148,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Informeller Austausch, Gespräche und gemeinsame Aktivitäten werden Teil des täglichen"
+   },
+   {
+    "top": 40.19769357495881,
+    "left": 6.203703703703703,
+    "width": 30.648148148148145,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Lebens und unterstützen die Gemeinschaft innerhalb des Zentrums."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p11-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 9.225700164744646,
+    "left": 48.98148148148148,
+    "width": 43.101851851851855,
+    "height": 35.584843492586494,
+    "src": "/pdf-extract/p11-img1.jpg",
+    "pxW": 931.0,
+    "pxH": 432.0
+   },
+   {
+    "top": 22.98187808896211,
+    "left": 56.15740740740741,
+    "width": 38.24074074074074,
+    "height": 31.630971993410213,
+    "src": "/pdf-extract/p11-img2.jpg",
+    "pxW": 826.0,
+    "pxH": 384.0
+   },
+   {
+    "top": 46.540362438220754,
+    "left": 6.203703703703703,
+    "width": 41.01851851851852,
+    "height": 48.76441515650741,
+    "src": "/pdf-extract/p11-img3.png",
+    "pxW": 886.0,
+    "pxH": 592.0
+   },
+   {
+    "top": 47.77594728171334,
+    "left": 50.27777777777778,
+    "width": 45.925925925925924,
+    "height": 42.25700164744646,
+    "src": "/pdf-extract/p11-img4.jpg",
+    "pxW": 992.0,
+    "pxH": 513.0
+   }
+  ]
+ },
+ {
+  "page": 12,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 88.56481481481482,
+    "width": 5.231481481481481,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "THERAPIEHAUS"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 6.203703703703703,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 92.42174629324546,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "06 / 07"
+   },
+   {
+    "top": 12.850082372322898,
+    "left": 6.203703703703703,
+    "width": 4.027777777777778,
+    "height": 1.4827018121911038,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "THERAPIE"
+   },
+   {
+    "top": 14.991762767710048,
+    "left": 6.203703703703703,
+    "width": 30.97222222222222,
+    "height": 5.601317957166392,
+    "fontSize": 58.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "RAUM FÜR HEILUNG"
+   },
+   {
+    "top": 21.663920922570014,
+    "left": 6.203703703703703,
+    "width": 27.12962962962963,
+    "height": 5.601317957166392,
+    "fontSize": 58.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#212120",
+    "text": "UND BEGEGNUNG"
+   },
+   {
+    "top": 34.596375617792425,
+    "left": 6.203703703703703,
+    "width": 27.870370370370374,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Das flexible Therapiehaus bietet Raum für Workshops,"
+   },
+   {
+    "top": 37.1499176276771,
+    "left": 6.203703703703703,
+    "width": 31.064814814814817,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "therapeutische Angebote und gemeinschaftliche Aktivitäten."
+   },
+   {
+    "top": 40.527182866556835,
+    "left": 6.203703703703703,
+    "width": 28.194444444444443,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Die unterschiedlichen Gebäude werden durch eine einheitliche"
+   },
+   {
+    "top": 42.75123558484349,
+    "left": 6.203703703703703,
+    "width": 33.657407407407405,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "architektonische Sprache miteinander verbunden. Bestand und Neubauten"
+   },
+   {
+    "top": 44.97528830313015,
+    "left": 6.203703703703703,
+    "width": 19.49074074074074,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "bilden ein zusammenhängendes Ensemble."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.32407407407407407,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p12-img0.png",
+    "pxW": 7.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 35.25535420098847,
+    "left": 44.074074074074076,
+    "width": 73.33333333333333,
+    "height": 66.06260296540363,
+    "src": "/pdf-extract/p12-img1.jpg",
+    "pxW": 1584.0,
+    "pxH": 802.0
+   },
+   {
+    "top": 48.352553542009886,
+    "left": 6.203703703703703,
+    "width": 35.138888888888886,
+    "height": 41.680395387149915,
+    "src": "/pdf-extract/p12-img2.png",
+    "pxW": 759.0,
+    "pxH": 506.0
+   },
+   {
+    "top": -13.756177924217464,
+    "left": 24.12037037037037,
+    "width": 57.36111111111111,
+    "height": 51.72981878088962,
+    "src": "/pdf-extract/p12-img3.jpg",
+    "pxW": 1239.0,
+    "pxH": 628.0
+   },
+   {
+    "top": 27.347611202635914,
+    "left": 34.675925925925924,
+    "width": 73.8425925925926,
+    "height": 66.55683690280065,
+    "src": "/pdf-extract/p12-img4.jpg",
+    "pxW": 1595.0,
+    "pxH": 808.0
+   }
+  ]
+ },
+ {
+  "page": 13,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 29.32454695222405,
+    "left": 5.9259259259259265,
+    "width": 26.990740740740744,
+    "height": 2.3887973640856672,
+    "fontSize": 25.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Neubau eines Wohngebäudes an der Kreuzung"
+   },
+   {
+    "top": 32.28995057660626,
+    "left": 5.9259259259259265,
+    "width": 24.166666666666668,
+    "height": 2.3887973640856672,
+    "fontSize": 25.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "von Sebastianusstraße und Goethestraße."
+   },
+   {
+    "top": 94.64579901153213,
+    "left": 5.9259259259259265,
+    "width": 11.25,
+    "height": 1.1532125205930808,
+    "fontSize": 12.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "LIVING IN A PROMINENT LOCATION"
+   },
+   {
+    "top": 38.5502471169687,
+    "left": 18.287037037037038,
+    "width": 12.87037037037037,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Stolberg-Atsch,  Deutschland"
+   },
+   {
+    "top": 42.42174629324547,
+    "left": 18.287037037037038,
+    "width": 6.342592592592593,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Wohnungsbau"
+   },
+   {
+    "top": 46.29324546952224,
+    "left": 18.287037037037038,
+    "width": 3.425925925925926,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Neubau"
+   },
+   {
+    "top": 50.16474464579901,
+    "left": 18.287037037037038,
+    "width": 4.768518518518518,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "ca. 650 m²"
+   },
+   {
+    "top": 54.118616144975284,
+    "left": 18.287037037037038,
+    "width": 4.768518518518518,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "ca. 500 m²"
+   },
+   {
+    "top": 57.990115321252055,
+    "left": 18.287037037037038,
+    "width": 11.62037037037037,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "4 Geschosse + Satteldach"
+   },
+   {
+    "top": 14.991762767710048,
+    "left": 5.9259259259259265,
+    "width": 21.435185185185183,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#5e7d62",
+    "text": "WOHNUNGSBAU · STOLBERG-ATSCH · 2025"
+   },
+   {
+    "top": 17.54530477759473,
+    "left": 5.9259259259259265,
+    "width": 55.27777777777778,
+    "height": 5.848434925864909,
+    "fontSize": 61.0,
+    "family": "CAAAAA+DejaVuSerif",
+    "color": "#151515",
+    "text": "LIVING IN A PROMINENT LOCATION"
+   },
+   {
+    "top": 38.5502471169687,
+    "left": 5.9259259259259265,
+    "width": 4.444444444444445,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "STANDORT"
+   },
+   {
+    "top": 42.58649093904448,
+    "left": 5.9259259259259265,
+    "width": 5.0,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "PROJEKTART"
+   },
+   {
+    "top": 46.62273476112026,
+    "left": 5.9259259259259265,
+    "width": 6.898148148148148,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "BAUMASSNAHME"
+   },
+   {
+    "top": 50.658978583196046,
+    "left": 5.9259259259259265,
+    "width": 9.25925925925926,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "GRUNDSTÜCKSFLÄCHE"
+   },
+   {
+    "top": 54.69522240527183,
+    "left": 5.9259259259259265,
+    "width": 1.6203703703703702,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "BGF"
+   },
+   {
+    "top": 58.7314662273476,
+    "left": 5.9259259259259265,
+    "width": 7.037037037037037,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "GESCHOSSIGKEIT"
+   },
+   {
+    "top": 6.095551894563426,
+    "left": 6.296296296296296,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 6.095551894563426,
+    "left": 82.03703703703704,
+    "width": 11.851851851851853,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "KONTEXT + SCHLÜSSELMERKMALE"
+   },
+   {
+    "top": 91.43327841845141,
+    "left": 5.9259259259259265,
+    "width": 16.435185185185187,
+    "height": 1.1532125205930808,
+    "fontSize": 12.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM"
+   },
+   {
+    "top": 95.88138385502472,
+    "left": 92.12962962962963,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 12.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#77776f",
+    "text": "02 / 07"
+   }
+  ],
+  "images": [
+   {
+    "top": 32.8665568369028,
+    "left": 39.07407407407407,
+    "width": 55.46296296296296,
+    "height": 55.51894563426688,
+    "src": "/pdf-extract/p13-img0.png",
+    "pxW": 1198.0,
+    "pxH": 674.0
+   },
+   {
+    "top": 93.24546952224053,
+    "left": 5.9259259259259265,
+    "width": 88.19444444444444,
+    "height": 0.16474464579901155,
+    "src": "/pdf-extract/p13-img1.png",
+    "pxW": 1905.0,
+    "pxH": 2.0
+   }
+  ]
+ },
+ {
+  "page": 14,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 94.64579901153213,
+    "left": 5.9259259259259265,
+    "width": 11.25,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "LIVING IN A PROMINENT LOCATION"
+   },
+   {
+    "top": 14.662273476112025,
+    "left": 5.9259259259259265,
+    "width": 26.666666666666668,
+    "height": 5.848434925864909,
+    "fontSize": 61.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#151515",
+    "text": "URBAN CONTEXT"
+   },
+   {
+    "top": 22.322899505766063,
+    "left": 5.9259259259259265,
+    "width": 34.49074074074074,
+    "height": 2.224052718286656,
+    "fontSize": 23.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "DasfünfeckigeGrundstückliegtzwischenzwei Straßen mit deutlich"
+   },
+   {
+    "top": 24.87644151565074,
+    "left": 5.9259259259259265,
+    "width": 15.787037037037038,
+    "height": 2.224052718286656,
+    "fontSize": 23.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "unterschiedlichem Charakter."
+   },
+   {
+    "top": 30.31301482701812,
+    "left": 5.9259259259259265,
+    "width": 33.7962962962963,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Die Sebastianusstraße ist stark befahren und durch mehrgeschossige"
+   },
+   {
+    "top": 32.70181219110379,
+    "left": 5.9259259259259265,
+    "width": 31.99074074074074,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Wohnbebauung geprägt. Die Goethestraße besitzt dagegen einen"
+   },
+   {
+    "top": 35.09060955518946,
+    "left": 5.9259259259259265,
+    "width": 34.629629629629626,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "ruhigeren, wohnlichen Charakter mit Reihenhäusern und freistehenden"
+   },
+   {
+    "top": 37.39703459637562,
+    "left": 5.9259259259259265,
+    "width": 9.62962962962963,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Einfamilienhäusern."
+   },
+   {
+    "top": 19.192751235584844,
+    "left": 52.361111111111114,
+    "width": 7.361111111111112,
+    "height": 1.8121911037891267,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#5e7d62",
+    "text": "KEY FEATURES"
+   },
+   {
+    "top": 50.0,
+    "left": 54.44444444444444,
+    "width": 6.435185185185185,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Lärmschutz"
+   },
+   {
+    "top": 52.22405271828665,
+    "left": 54.44444444444444,
+    "width": 33.75,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Der nördliche Baukörper schützt die dahinterliegenden Wohnbereiche vor dem"
+   },
+   {
+    "top": 54.118616144975284,
+    "left": 54.44444444444444,
+    "width": 6.898148148148148,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Straßenverkehr."
+   },
+   {
+    "top": 59.555189456342674,
+    "left": 54.44444444444444,
+    "width": 7.037037037037037,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Mixed Living"
+   },
+   {
+    "top": 61.86161449752883,
+    "left": 54.44444444444444,
+    "width": 32.96296296296296,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Unterschiedliche Wohnformen innerhalb eines gemeinsamen Wohnkonzepts."
+   },
+   {
+    "top": 42.50411861614498,
+    "left": 54.44444444444444,
+    "width": 8.796296296296296,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Zwei Baukörper"
+   },
+   {
+    "top": 44.81054365733114,
+    "left": 54.44444444444444,
+    "width": 34.81481481481482,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Architektonische Reaktion auf die unterschiedlichen städtebaulichen Situationen."
+   },
+   {
+    "top": 32.948929159802304,
+    "left": 54.44444444444444,
+    "width": 13.472222222222221,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Zwei Straßencharaktere"
+   },
+   {
+    "top": 35.17298187808896,
+    "left": 54.44444444444444,
+    "width": 32.361111111111114,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Urban und stark frequentiert zur Sebastianusstraße, ruhig und wohnlich zur"
+   },
+   {
+    "top": 37.067545304777596,
+    "left": 54.44444444444444,
+    "width": 6.111111111111111,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Goethestraße."
+   },
+   {
+    "top": 25.45304777594728,
+    "left": 54.44444444444444,
+    "width": 13.518518518518519,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Fünfeckiges Grundstück"
+   },
+   {
+    "top": 27.75947281713344,
+    "left": 54.44444444444444,
+    "width": 29.02777777777778,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Besondere Grundstücksgeometrie als Ausgangspunkt des Entwurfs."
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 81.94444444444444,
+    "width": 11.851851851851853,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "KONTEXT + SCHLÜSSELMERKMALE"
+   },
+   {
+    "top": 94.06919275123559,
+    "left": 91.80555555555556,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "02 / 07"
+   }
+  ],
+  "images": [
+   {
+    "top": 25.45304777594728,
+    "left": 52.63888888888889,
+    "width": 0.787037037037037,
+    "height": 1.400329489291598,
+    "src": "/pdf-extract/p14-img0.png",
+    "pxW": 17.0,
+    "pxH": 17.0
+   },
+   {
+    "top": 32.948929159802304,
+    "left": 52.63888888888889,
+    "width": 0.787037037037037,
+    "height": 1.400329489291598,
+    "src": "/pdf-extract/p14-img1.png",
+    "pxW": 17.0,
+    "pxH": 17.0
+   },
+   {
+    "top": 42.50411861614498,
+    "left": 52.63888888888889,
+    "width": 0.787037037037037,
+    "height": 1.400329489291598,
+    "src": "/pdf-extract/p14-img2.png",
+    "pxW": 17.0,
+    "pxH": 17.0
+   },
+   {
+    "top": 50.0,
+    "left": 52.63888888888889,
+    "width": 0.787037037037037,
+    "height": 1.400329489291598,
+    "src": "/pdf-extract/p14-img3.png",
+    "pxW": 17.0,
+    "pxH": 17.0
+   },
+   {
+    "top": 59.555189456342674,
+    "left": 52.63888888888889,
+    "width": 0.787037037037037,
+    "height": 1.400329489291598,
+    "src": "/pdf-extract/p14-img4.png",
+    "pxW": 17.0,
+    "pxH": 17.0
+   },
+   {
+    "top": 35.42009884678748,
+    "left": -6.805555555555555,
+    "width": 65.27777777777779,
+    "height": 77.42998352553542,
+    "src": "/pdf-extract/p14-img5.png",
+    "pxW": 1410.0,
+    "pxH": 940.0
+   },
+   {
+    "top": 93.24546952224053,
+    "left": 5.9259259259259265,
+    "width": 88.19444444444444,
+    "height": 0.16474464579901155,
+    "src": "/pdf-extract/p14-img6.png",
+    "pxW": 1905.0,
+    "pxH": 2.0
+   }
+  ]
+ },
+ {
+  "page": 15,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 23.88797364085667,
+    "left": 5.9259259259259265,
+    "width": 39.62962962962963,
+    "height": 2.3887973640856672,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Das Wohnkonzept verbindet unterschiedliche Wohnformen innerhalb"
+   },
+   {
+    "top": 26.77100494233937,
+    "left": 5.9259259259259265,
+    "width": 21.89814814814815,
+    "height": 2.3887973640856672,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "einer gemeinsamen Gebäudestruktur."
+   },
+   {
+    "top": 29.736408566721583,
+    "left": 5.9259259259259265,
+    "width": 40.879629629629626,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Die Organisation der Grundrisse reagiert auf die besondere Form des Grundstücks"
+   },
+   {
+    "top": 32.20757825370676,
+    "left": 5.9259259259259265,
+    "width": 34.30555555555556,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "sowie auf die unterschiedlichen Qualitäten der beiden Straßenseiten."
+   },
+   {
+    "top": 37.23228995057661,
+    "left": 5.9259259259259265,
+    "width": 36.388888888888886,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Die geschützteren Wohnbereiche orientieren sich zur ruhigeren Seite des"
+   },
+   {
+    "top": 39.70345963756178,
+    "left": 5.9259259259259265,
+    "width": 6.527777777777779,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Grundstücks."
+   },
+   {
+    "top": 94.64579901153213,
+    "left": 5.9259259259259265,
+    "width": 11.25,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "LIVING IN A PROMINENT LOCATION"
+   },
+   {
+    "top": 14.41515650741351,
+    "left": 5.9259259259259265,
+    "width": 43.05555555555556,
+    "height": 4.942339373970346,
+    "fontSize": 52.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "MIXED LIVING ON EVERY FLOOR"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 81.94444444444444,
+    "width": 11.851851851851853,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "KONTEXT + SCHLÜSSELMERKMALE"
+   },
+   {
+    "top": 94.64579901153213,
+    "left": 91.57407407407408,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "02 / 07"
+   }
+  ],
+  "images": [
+   {
+    "top": 0.6589785831960462,
+    "left": 3.8425925925925926,
+    "width": 62.5,
+    "height": 78.5831960461285,
+    "src": "/pdf-extract/p15-img0.jpg",
+    "pxW": 1350.0,
+    "pxH": 954.0
+   },
+   {
+    "top": 10.378912685337728,
+    "left": 57.36111111111111,
+    "width": 30.694444444444446,
+    "height": 77.26523887973642,
+    "src": "/pdf-extract/p15-img1.png",
+    "pxW": 663.0,
+    "pxH": 938.0
+   },
+   {
+    "top": 93.24546952224053,
+    "left": 5.9259259259259265,
+    "width": 88.19444444444444,
+    "height": 0.16474464579901155,
+    "src": "/pdf-extract/p15-img2.png",
+    "pxW": 1905.0,
+    "pxH": 2.0
+   }
+  ]
+ },
+ {
+  "page": 16,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 94.64579901153213,
+    "left": 5.9259259259259265,
+    "width": 11.25,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "LIVING IN A PROMINENT LOCATION"
+   },
+   {
+    "top": 14.41515650741351,
+    "left": 5.9259259259259265,
+    "width": 43.05555555555556,
+    "height": 4.942339373970346,
+    "fontSize": 52.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "MIXED LIVING ON EVERY FLOOR"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 6.203703703703703,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 5.848434925864909,
+    "left": 81.94444444444444,
+    "width": 11.851851851851853,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "KONTEXT + SCHLÜSSELMERKMALE"
+   },
+   {
+    "top": 94.64579901153213,
+    "left": 91.85185185185185,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "02 / 07"
+   }
+  ],
+  "images": [
+   {
+    "top": 22.73476112026359,
+    "left": 6.203703703703703,
+    "width": 67.54629629629629,
+    "height": 85.00823723228996,
+    "src": "/pdf-extract/p16-img0.jpg",
+    "pxW": 1459.0,
+    "pxH": 1032.0
+   },
+   {
+    "top": 25.370675453047774,
+    "left": 49.81481481481482,
+    "width": 48.00925925925926,
+    "height": 53.95387149917627,
+    "src": "/pdf-extract/p16-img1.jpg",
+    "pxW": 1037.0,
+    "pxH": 655.0
+   },
+   {
+    "top": 93.24546952224053,
+    "left": 5.9259259259259265,
+    "width": 88.19444444444444,
+    "height": 0.16474464579901155,
+    "src": "/pdf-extract/p16-img2.png",
+    "pxW": 1905.0,
+    "pxH": 2.0
+   }
+  ]
+ },
+ {
+  "page": 17,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 94.64579901153213,
+    "left": 5.9259259259259265,
+    "width": 11.25,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "LIVING IN A PROMINENT LOCATION"
+   },
+   {
+    "top": 15.815485996705107,
+    "left": 6.898148148148148,
+    "width": 24.675925925925927,
+    "height": 5.848434925864909,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "ERSCHLIEßUNG"
+   },
+   {
+    "top": 23.805601317957166,
+    "left": 6.898148148148148,
+    "width": 8.657407407407407,
+    "height": 1.8121911037891267,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "ACCESS GALLERY"
+   },
+   {
+    "top": 28.253706754530477,
+    "left": 6.898148148148148,
+    "width": 30.74074074074074,
+    "height": 1.8945634266886324,
+    "fontSize": 20.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Die Wohnungen werden über einen Laubengang erschlossen. Die"
+   },
+   {
+    "top": 30.477759472817134,
+    "left": 6.898148148148148,
+    "width": 30.74074074074074,
+    "height": 1.8945634266886324,
+    "fontSize": 20.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Erschließung bildet dabei die Verbindung zwischen den einzelnen"
+   },
+   {
+    "top": 32.70181219110379,
+    "left": 6.898148148148148,
+    "width": 25.925925925925924,
+    "height": 1.8945634266886324,
+    "fontSize": 20.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Wohneinheiten und der gemeinsamen Gebäudestruktur."
+   },
+   {
+    "top": 7.660626029654035,
+    "left": 6.25,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 7.660626029654035,
+    "left": 81.99074074074075,
+    "width": 11.851851851851853,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "KONTEXT + SCHLÜSSELMERKMALE"
+   },
+   {
+    "top": 94.15156507413509,
+    "left": 91.66666666666666,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "02 / 07"
+   }
+  ],
+  "images": [
+   {
+    "top": 51.31795716639209,
+    "left": 58.10185185185185,
+    "width": 33.56481481481482,
+    "height": 39.78583196046129,
+    "src": "/pdf-extract/p17-img0.png",
+    "pxW": 725.0,
+    "pxH": 483.0
+   },
+   {
+    "top": 7.990115321252059,
+    "left": 56.99074074074074,
+    "width": 37.083333333333336,
+    "height": 37.1499176276771,
+    "src": "/pdf-extract/p17-img1.png",
+    "pxW": 801.0,
+    "pxH": 451.0
+   },
+   {
+    "top": 38.138385502471166,
+    "left": 6.25,
+    "width": 49.583333333333336,
+    "height": 52.96540362438221,
+    "src": "/pdf-extract/p17-img2.png",
+    "pxW": 1071.0,
+    "pxH": 643.0
+   },
+   {
+    "top": 93.24546952224053,
+    "left": 5.9259259259259265,
+    "width": 88.19444444444444,
+    "height": 0.16474464579901155,
+    "src": "/pdf-extract/p17-img3.png",
+    "pxW": 1905.0,
+    "pxH": 2.0
+   }
+  ]
+ },
+ {
+  "page": 18,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 14.579901153212521,
+    "left": 5.9259259259259265,
+    "width": 41.25,
+    "height": 5.848434925864909,
+    "fontSize": 61.0,
+    "family": "AAAAAA+DejaVuSerif",
+    "color": "#151515",
+    "text": "CONSTRUCTION SYSTEM"
+   },
+   {
+    "top": 28.500823723228997,
+    "left": 5.9259259259259265,
+    "width": 40.78703703703704,
+    "height": 2.3064250411861615,
+    "fontSize": 24.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "Das Konstruktionssystem folgt der klaren Gliederung der Baukörper und"
+   },
+   {
+    "top": 31.3838550247117,
+    "left": 5.9259259259259265,
+    "width": 30.74074074074074,
+    "height": 2.3064250411861615,
+    "fontSize": 24.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#151515",
+    "text": "unterstützt die Organisation der Wohnungsgrundrisse."
+   },
+   {
+    "top": 34.102141680395384,
+    "left": 5.9259259259259265,
+    "width": 37.083333333333336,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "Konstruktion, Grundriss und Erschließung werden als zusammenhängendes"
+   },
+   {
+    "top": 36.49093904448105,
+    "left": 5.9259259259259265,
+    "width": 18.24074074074074,
+    "height": 2.059308072487644,
+    "fontSize": 21.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#6f6f69",
+    "text": "architektonisches System entwickelt."
+   },
+   {
+    "top": 94.64579901153213,
+    "left": 5.9259259259259265,
+    "width": 11.25,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "LIVING IN A PROMINENT LOCATION"
+   },
+   {
+    "top": 7.660626029654035,
+    "left": 6.25,
+    "width": 13.287037037037036,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR · PORTFOLIO 2026"
+   },
+   {
+    "top": 94.15156507413509,
+    "left": 91.66666666666666,
+    "width": 2.2222222222222223,
+    "height": 1.1532125205930808,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "02 / 07"
+   }
+  ],
+  "images": [
+   {
+    "top": 35.00823723228995,
+    "left": 4.861111111111112,
+    "width": 49.44444444444444,
+    "height": 58.48434925864909,
+    "src": "/pdf-extract/p18-img0.jpg",
+    "pxW": 1068.0,
+    "pxH": 710.0
+   },
+   {
+    "top": 17.215815485996703,
+    "left": 61.111111111111114,
+    "width": 29.86111111111111,
+    "height": 74.13509060955519,
+    "src": "/pdf-extract/p18-img1.jpg",
+    "pxW": 645.0,
+    "pxH": 900.0
+   },
+   {
+    "top": 14.250411861614499,
+    "left": 78.93518518518519,
+    "width": 14.166666666666666,
+    "height": 71.66392092257001,
+    "src": "/pdf-extract/p18-img2.png",
+    "pxW": 306.0,
+    "pxH": 870.0
+   },
+   {
+    "top": 93.24546952224053,
+    "left": 5.9259259259259265,
+    "width": 88.19444444444444,
+    "height": 0.16474464579901155,
+    "src": "/pdf-extract/p18-img3.png",
+    "pxW": 1905.0,
+    "pxH": 2.0
+   },
+   {
+    "top": 93.24546952224053,
+    "left": 5.9259259259259265,
+    "width": 88.19444444444444,
+    "height": 0.16474464579901155,
+    "src": "/pdf-extract/p18-img4.png",
+    "pxW": 1905.0,
+    "pxH": 2.0
+   }
+  ]
+ },
+ {
+  "page": 19,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 6.425041186161449,
+    "left": 6.481481481481481,
+    "width": 7.083333333333333,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "SOFIIA VAN DER VIR·"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 14.444444444444443,
+    "width": 12.63888888888889,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "INTERIOR ARCHITECTURE PORTFOLIO"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 87.63888888888889,
+    "width": 5.87962962962963,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "PROJECT OPENER"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 6.481481481481481,
+    "width": 5.787037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "HALLE FUER ALLE"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 92.68518518518518,
+    "width": 0.8333333333333334,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "01"
+   },
+   {
+    "top": 49.588138385502475,
+    "left": 69.9074074074074,
+    "width": 14.398148148148149,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "PROJECT IMAGE / HISTORIC CITY BATH"
+   },
+   {
+    "top": 12.43822075782537,
+    "left": 6.481481481481481,
+    "width": 30.787037037037035,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d957d",
+    "text": "KULTURELLE UND SOZIALE REVITALISIERUNG · KREFELD · FEBRUAR 2025"
+   },
+   {
+    "top": 17.462932454695224,
+    "left": 6.481481481481481,
+    "width": 28.379629629629626,
+    "height": 5.848434925864909,
+    "fontSize": 61.0,
+    "family": "CAAAAA+DejaVuSerif",
+    "color": "#1f1f1c",
+    "text": "HALLE FUER ALLE"
+   },
+   {
+    "top": 23.88797364085667,
+    "left": 6.481481481481481,
+    "width": 27.500000000000004,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Revitalisierung des historischen Stadtbads Krefeld"
+   },
+   {
+    "top": 29.40691927512356,
+    "left": 6.481481481481481,
+    "width": 21.99074074074074,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Umnutzung der ehemaligen Maennerhalle"
+   },
+   {
+    "top": 31.87808896210873,
+    "left": 6.481481481481481,
+    "width": 19.62962962962963,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "zu einem offenen Ort fuer Bewegung,"
+   },
+   {
+    "top": 34.349258649093905,
+    "left": 6.481481481481481,
+    "width": 16.157407407407405,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Begegnung und Gemeinschaft."
+   },
+   {
+    "top": 42.75123558484349,
+    "left": 6.481481481481481,
+    "width": 4.305555555555555,
+    "height": 1.4827018121911038,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "STANDORT"
+   },
+   {
+    "top": 46.45799011532125,
+    "left": 6.481481481481481,
+    "width": 2.8703703703703702,
+    "height": 1.4827018121911038,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "DATUM"
+   },
+   {
+    "top": 50.24711696869851,
+    "left": 6.481481481481481,
+    "width": 4.953703703703704,
+    "height": 1.4827018121911038,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "PROJEKTART"
+   },
+   {
+    "top": 53.95387149917627,
+    "left": 6.481481481481481,
+    "width": 8.703703703703704,
+    "height": 1.4827018121911038,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "GEBAEUDEKATEGORIE"
+   },
+   {
+    "top": 57.66062602965404,
+    "left": 6.481481481481481,
+    "width": 6.7592592592592595,
+    "height": 1.4827018121911038,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "BAUMASSNAHME"
+   },
+   {
+    "top": 61.3673805601318,
+    "left": 6.481481481481481,
+    "width": 6.25,
+    "height": 1.4827018121911038,
+    "fontSize": 15.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "AUSZEICHNUNG"
+   },
+   {
+    "top": 42.66886326194398,
+    "left": 19.212962962962962,
+    "width": 8.935185185185185,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Krefeld, Deutschland"
+   },
+   {
+    "top": 46.29324546952224,
+    "left": 19.212962962962962,
+    "width": 12.083333333333334,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Konzeptphase Februar 2025"
+   },
+   {
+    "top": 49.83525535420099,
+    "left": 19.212962962962962,
+    "width": 13.148148148148147,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Cultural & Social Revitalization"
+   },
+   {
+    "top": 53.45963756177924,
+    "left": 19.212962962962962,
+    "width": 10.787037037037036,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Heritage / Public Building"
+   },
+   {
+    "top": 57.084019769357496,
+    "left": 19.212962962962962,
+    "width": 14.25925925925926,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Adaptive Reuse / Redevelopment"
+   },
+   {
+    "top": 60.70840197693575,
+    "left": 19.212962962962962,
+    "width": 15.046296296296296,
+    "height": 1.729818780889621,
+    "fontSize": 18.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "1. Platz · Wettbewerb Stadt Krefeld"
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.3703703703703704,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p19-img0.png",
+    "pxW": 8.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 25.86490939044481,
+    "left": 40.50925925925926,
+    "width": 53.842592592592595,
+    "height": 50.57660626029654,
+    "src": "/pdf-extract/p19-img1.png",
+    "pxW": 1163.0,
+    "pxH": 614.0
+   }
+  ]
+ },
+ {
+  "page": 20,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 50.16474464579901,
+    "left": 72.31481481481481,
+    "width": 9.583333333333334,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "CONCEPT / HALL FOR ALL"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 6.481481481481481,
+    "width": 7.083333333333333,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "SOFIIA VAN DER VIR·"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 14.444444444444443,
+    "width": 12.63888888888889,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "INTERIOR ARCHITECTURE PORTFOLIO"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 90.32407407407408,
+    "width": 3.148148148148148,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "CONCEPT"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 6.481481481481481,
+    "width": 5.787037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "HALLE FUER ALLE"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 92.68518518518518,
+    "width": 0.8333333333333334,
+    "height": 1.2355848434925865,
+    "fontSize": 13.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "03"
+   },
+   {
+    "top": 14.332784184514002,
+    "left": 6.481481481481481,
+    "width": 3.935185185185185,
+    "height": 1.5650741350906094,
+    "fontSize": 16.0,
+    "family": "BAAAAA+DejaVuSans",
+    "color": "#7d957d",
+    "text": "CONCEPT"
+   },
+   {
+    "top": 16.556836902800658,
+    "left": 6.481481481481481,
+    "width": 33.05555555555556,
+    "height": 4.7775947281713345,
+    "fontSize": 49.0,
+    "family": "CAAAAA+DejaVuSerif",
+    "color": "#1f1f1c",
+    "text": "A SPACE FOR MOVEMENT,"
+   },
+   {
+    "top": 22.240527182866558,
+    "left": 6.481481481481481,
+    "width": 39.351851851851855,
+    "height": 4.7775947281713345,
+    "fontSize": 49.0,
+    "family": "CAAAAA+DejaVuSerif",
+    "color": "#1f1f1c",
+    "text": "ENCOUNTER AND COMMUNITY"
+   },
+   {
+    "top": 27.51235584843493,
+    "left": 6.481481481481481,
+    "width": 41.15740740740741,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Die ehemalige Maennerhalle wird nicht als einzelner Funktionsraum verstanden,"
+   },
+   {
+    "top": 30.065897858319605,
+    "left": 6.481481481481481,
+    "width": 39.44444444444444,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "sondern als offener gemeinschaftlicher Innenraum. Das Projekt verbindet die"
+   },
+   {
+    "top": 32.53706754530478,
+    "left": 6.481481481481481,
+    "width": 35.138888888888886,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Geschichte des Ortes mit neuen sozialen und kulturellen Nutzungen."
+   },
+   {
+    "top": 80.23064250411862,
+    "left": 6.481481481481481,
+    "width": 34.675925925925924,
+    "height": 2.224052718286656,
+    "fontSize": 23.0,
+    "family": "CAAAAA+DejaVuSerif",
+    "color": "#1f1f1c",
+    "text": "Aus einem geschlossenen Stadtbad wird ein offener Ort für alle."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.3703703703703704,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p20-img0.png",
+    "pxW": 8.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 23.31136738056013,
+    "left": 60.18518518518518,
+    "width": 33.84259259259259,
+    "height": 55.6836902800659,
+    "src": "/pdf-extract/p20-img1.png",
+    "pxW": 731.0,
+    "pxH": 676.0
+   },
+   {
+    "top": 38.79736408566721,
+    "left": 6.481481481481481,
+    "width": 24.25925925925926,
+    "height": 39.04448105436573,
+    "src": "/pdf-extract/p20-img2.jpg",
+    "pxW": 524.0,
+    "pxH": 474.0
+   },
+   {
+    "top": 5.107084019769357,
+    "left": 38.47222222222222,
+    "width": 67.68518518518518,
+    "height": 85.17298187808896,
+    "src": "/pdf-extract/p20-img3.jpg",
+    "pxW": 1462.0,
+    "pxH": 1034.0
+   }
+  ]
+ },
+ {
+  "page": 21,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 6.425041186161449,
+    "left": 6.481481481481481,
+    "width": 7.083333333333333,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR·"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 14.444444444444443,
+    "width": 12.63888888888889,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INTERIOR ARCHITECTURE PORTFOLIO"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 82.73148148148148,
+    "width": 10.74074074074074,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "CONTEXT + EXISTING BUILDING"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 6.481481481481481,
+    "width": 5.787037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "HALLE FUER ALLE"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 92.68518518518518,
+    "width": 0.8333333333333334,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "02"
+   },
+   {
+    "top": 17.792421746293247,
+    "left": 6.481481481481481,
+    "width": 8.194444444444445,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "HISTORIC CONTEXT"
+   },
+   {
+    "top": 19.934102141680395,
+    "left": 6.481481481481481,
+    "width": 25.74074074074074,
+    "height": 4.7775947281713345,
+    "fontSize": 49.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#1f1f1c",
+    "text": "STADTBAD KREFELD"
+   },
+   {
+    "top": 25.370675453047774,
+    "left": 6.481481481481481,
+    "width": 35.92592592592593,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Das historische Stadtbad Krefeld liegt im suedlichen Teil der Innenstadt an"
+   },
+   {
+    "top": 27.677100494233937,
+    "left": 6.481481481481481,
+    "width": 36.574074074074076,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "der Kreuzung von Neusser Straße und Gerberstraße. Der Gebaeudekomplex"
+   },
+   {
+    "top": 30.065897858319605,
+    "left": 6.481481481481481,
+    "width": 36.06481481481482,
+    "height": 1.9769357495881383,
+    "fontSize": 21.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "umfasst ca. 8.000 m², wurde 1890 eroeffnet und ist seit 2003 geschlossen."
+   },
+   {
+    "top": 23.97034596375618,
+    "left": 52.361111111111114,
+    "width": 6.111111111111111,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#7d957d",
+    "text": "KEY CONTENT"
+   },
+   {
+    "top": 61.61449752883031,
+    "left": 54.44444444444444,
+    "width": 9.768518518518517,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Community-Projekt"
+   },
+   {
+    "top": 63.67380560131796,
+    "left": 54.44444444444444,
+    "width": 29.768518518518515,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "Die Revitalisierung wird als gemeinschaftsorientiertes Projekt verstanden."
+   },
+   {
+    "top": 37.64415156507413,
+    "left": 54.44444444444444,
+    "width": 9.86111111111111,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Eigentum der Stadt"
+   },
+   {
+    "top": 39.78583196046129,
+    "left": 54.44444444444444,
+    "width": 23.51851851851852,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "Das Stadtbad befindet sich im Eigentum der Stadt Krefeld."
+   },
+   {
+    "top": 30.31301482701812,
+    "left": 54.44444444444444,
+    "width": 10.555555555555555,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Historischer Bestand"
+   },
+   {
+    "top": 32.45469522240527,
+    "left": 54.44444444444444,
+    "width": 30.833333333333336,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "Das Gebaeude besitzt einen hohen architektonischen und historischen Wert."
+   },
+   {
+    "top": 44.89291598023064,
+    "left": 54.44444444444444,
+    "width": 11.805555555555555,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Bestehende Nutzungen"
+   },
+   {
+    "top": 46.952224052718286,
+    "left": 54.44444444444444,
+    "width": 26.481481481481485,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "Im Gebaeude gibt es bereits Nutzungen durch freischwimmer, ein"
+   },
+   {
+    "top": 48.92915980230643,
+    "left": 54.44444444444444,
+    "width": 23.14814814814815,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "Jugendkulturzentrum und die entomologische Sammlung."
+   },
+   {
+    "top": 54.2833607907743,
+    "left": 54.44444444444444,
+    "width": 12.453703703703704,
+    "height": 1.8945634266886324,
+    "fontSize": 19.0,
+    "family": "AAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Ehemalige Maennerhalle"
+   },
+   {
+    "top": 56.34266886326195,
+    "left": 54.44444444444444,
+    "width": 26.75925925925926,
+    "height": 1.6474464579901154,
+    "fontSize": 17.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#70706a",
+    "text": "Die ehemalige Maennerhalle wird als neue Halle fuer Alle gedacht."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.3703703703703704,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p21-img0.png",
+    "pxW": 8.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 30.230642504118617,
+    "left": 52.63888888888889,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p21-img1.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 37.56177924217463,
+    "left": 52.63888888888889,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p21-img2.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 44.89291598023064,
+    "left": 52.63888888888889,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p21-img3.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 54.20098846787479,
+    "left": 52.63888888888889,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p21-img4.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 61.53212520593081,
+    "left": 52.63888888888889,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p21-img5.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 29.736408566721583,
+    "left": 3.009259259259259,
+    "width": 44.351851851851855,
+    "height": 55.766062602965405,
+    "src": "/pdf-extract/p21-img6.jpg",
+    "pxW": 958.0,
+    "pxH": 677.0
+   }
+  ]
+ },
+ {
+  "page": 22,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 6.425041186161449,
+    "left": 6.481481481481481,
+    "width": 7.083333333333333,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR·"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 14.444444444444443,
+    "width": 12.63888888888889,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INTERIOR ARCHITECTURE PORTFOLIO"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 87.4074074074074,
+    "width": 6.111111111111111,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "PLANS + SECTION"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 6.481481481481481,
+    "width": 5.787037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "HALLE FUER ALLE"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 92.68518518518518,
+    "width": 0.8333333333333334,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "06"
+   },
+   {
+    "top": 17.792421746293247,
+    "left": 6.481481481481481,
+    "width": 4.675925925925926,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DRAWINGS"
+   },
+   {
+    "top": 19.934102141680395,
+    "left": 6.481481481481481,
+    "width": 24.074074074074073,
+    "height": 4.7775947281713345,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "FIRST FLOOR PLAN"
+   },
+   {
+    "top": 25.617792421746294,
+    "left": 6.481481481481481,
+    "width": 37.77777777777778,
+    "height": 4.7775947281713345,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "AND LONGITUDINAL SECTION"
+   },
+   {
+    "top": 31.054365733113677,
+    "left": 6.481481481481481,
+    "width": 34.49074074074074,
+    "height": 1.9769357495881383,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Grundriss und Längsschnitt zeigen die räumliche Organisation der Halle"
+   },
+   {
+    "top": 33.44316309719934,
+    "left": 6.481481481481481,
+    "width": 32.73148148148148,
+    "height": 1.9769357495881383,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "und die Einbindung der neuen Nutzung in den historischen Bestand."
+   },
+   {
+    "top": 83.77265238879737,
+    "left": 6.666666666666667,
+    "width": 33.00925925925926,
+    "height": 2.224052718286656,
+    "fontSize": 23.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#1f1f1c",
+    "text": "Bestand, Atmosphaere und neue Nutzung werden zusammen"
+   },
+   {
+    "top": 86.16144975288303,
+    "left": 6.666666666666667,
+    "width": 4.675925925925926,
+    "height": 2.224052718286656,
+    "fontSize": 23.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#1f1f1c",
+    "text": "gedacht."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.3703703703703704,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p22-img0.png",
+    "pxW": 8.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 25.617792421746294,
+    "left": 46.157407407407405,
+    "width": 54.25925925925926,
+    "height": 57.66062602965404,
+    "src": "/pdf-extract/p22-img1.png",
+    "pxW": 1172.0,
+    "pxH": 700.0
+   },
+   {
+    "top": 29.489291598023065,
+    "left": 3.935185185185185,
+    "width": 39.166666666666664,
+    "height": 50.16474464579901,
+    "src": "/pdf-extract/p22-img2.png",
+    "pxW": 846.0,
+    "pxH": 609.0
+   }
+  ]
+ },
+ {
+  "page": 23,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 6.425041186161449,
+    "left": 6.481481481481481,
+    "width": 7.083333333333333,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR·"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 14.444444444444443,
+    "width": 12.63888888888889,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INTERIOR ARCHITECTURE PORTFOLIO"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 84.9074074074074,
+    "width": 8.564814814814815,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INTERIOR ARCHITECTURE"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 6.481481481481481,
+    "width": 5.787037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "HALLE FUER ALLE"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 92.68518518518518,
+    "width": 0.8333333333333334,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "05"
+   },
+   {
+    "top": 17.792421746293247,
+    "left": 6.481481481481481,
+    "width": 8.194444444444445,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INTERIOR CONCEPT"
+   },
+   {
+    "top": 19.934102141680395,
+    "left": 6.481481481481481,
+    "width": 18.98148148148148,
+    "height": 4.7775947281713345,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "DIE HALLE ALS"
+   },
+   {
+    "top": 25.617792421746294,
+    "left": 6.481481481481481,
+    "width": 27.77777777777778,
+    "height": 4.7775947281713345,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "GEMEINSAMER RAUM"
+   },
+   {
+    "top": 30.971993410214164,
+    "left": 6.481481481481481,
+    "width": 32.083333333333336,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "Der Innenraum der ehemaligen Maennerhalle wird als zentrale"
+   },
+   {
+    "top": 33.44316309719934,
+    "left": 6.481481481481481,
+    "width": 31.89814814814815,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "raeumliche Ressource des Projekts genutzt. Die neue Nutzung"
+   },
+   {
+    "top": 35.914332784184516,
+    "left": 6.481481481481481,
+    "width": 31.064814814814817,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "soll den Bestand aktivieren und die historische Atmosphaere"
+   },
+   {
+    "top": 38.46787479406919,
+    "left": 6.481481481481481,
+    "width": 27.870370370370374,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "des Stadtbads in einen heutigen oeffentlichen Kontext"
+   },
+   {
+    "top": 40.93904448105437,
+    "left": 6.481481481481481,
+    "width": 7.268518518518519,
+    "height": 2.14168039538715,
+    "fontSize": 22.0,
+    "family": "CAAAAA+DejaVuSans",
+    "color": "#1f1f1c",
+    "text": "ueberfuehren."
+   },
+   {
+    "top": 44.89291598023064,
+    "left": 6.481481481481481,
+    "width": 6.111111111111111,
+    "height": 1.6474464579901154,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "KEY CONTENT"
+   },
+   {
+    "top": 51.23558484349259,
+    "left": 8.564814814814815,
+    "width": 3.148148148148148,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Kultur"
+   },
+   {
+    "top": 53.29489291598023,
+    "left": 8.564814814814815,
+    "width": 27.916666666666668,
+    "height": 1.6474464579901154,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Oeffentliche und kulturelle Nutzung als neuer Schwerpunkt der Halle."
+   },
+   {
+    "top": 58.5667215815486,
+    "left": 8.564814814814815,
+    "width": 3.8425925925925926,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Bildung"
+   },
+   {
+    "top": 60.62602965403624,
+    "left": 8.564814814814815,
+    "width": 34.629629629629626,
+    "height": 1.6474464579901154,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Die Revitalisierung eroeffnet Raum fuer Wissen, Austausch und gemeinsames Lernen."
+   },
+   {
+    "top": 65.89785831960461,
+    "left": 8.564814814814815,
+    "width": 3.8425925925925926,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Freizeit"
+   },
+   {
+    "top": 67.95716639209226,
+    "left": 8.564814814814815,
+    "width": 26.203703703703702,
+    "height": 1.6474464579901154,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Die Halle erhaelt eine soziale und alltaegliche Nutzungsqualitaet."
+   },
+   {
+    "top": 80.39538714991762,
+    "left": 8.564814814814815,
+    "width": 5.277777777777778,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Bewegung"
+   },
+   {
+    "top": 82.53706754530478,
+    "left": 8.564814814814815,
+    "width": 31.435185185185183,
+    "height": 1.6474464579901154,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Der urspruengliche Charakter des Stadtbads wird in eine neue aktive Nutzung"
+   },
+   {
+    "top": 84.43163097199341,
+    "left": 8.564814814814815,
+    "width": 4.537037037037037,
+    "height": 1.6474464579901154,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "uebersetzt."
+   },
+   {
+    "top": 73.22899505766063,
+    "left": 8.564814814814815,
+    "width": 5.7407407407407405,
+    "height": 1.8945634266886324,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Begegnung"
+   },
+   {
+    "top": 75.28830313014826,
+    "left": 8.564814814814815,
+    "width": 29.444444444444446,
+    "height": 1.6474464579901154,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Der Innenraum wird als Ort fuer Gemeinschaft und Austausch entwickelt."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.3703703703703704,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p23-img0.png",
+    "pxW": 8.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 23.31136738056013,
+    "left": 60.18518518518518,
+    "width": 33.84259259259259,
+    "height": 55.6836902800659,
+    "src": "/pdf-extract/p23-img1.png",
+    "pxW": 731.0,
+    "pxH": 676.0
+   },
+   {
+    "top": 14.00329489291598,
+    "left": 25.694444444444443,
+    "width": 68.7037037037037,
+    "height": 74.2174629324547,
+    "src": "/pdf-extract/p23-img2.png",
+    "pxW": 1484.0,
+    "pxH": 901.0
+   },
+   {
+    "top": 51.15321252059309,
+    "left": 6.7592592592592595,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p23-img3.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 58.48434925864909,
+    "left": 6.7592592592592595,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p23-img4.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 65.7331136738056,
+    "left": 6.7592592592592595,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p23-img5.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 73.06425041186162,
+    "left": 6.7592592592592595,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p23-img6.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   },
+   {
+    "top": 80.39538714991762,
+    "left": 6.7592592592592595,
+    "width": 0.6944444444444444,
+    "height": 1.2355848434925865,
+    "src": "/pdf-extract/p23-img7.png",
+    "pxW": 15.0,
+    "pxH": 15.0
+   }
+  ]
+ },
+ {
+  "page": 24,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 6.425041186161449,
+    "left": 6.481481481481481,
+    "width": 7.083333333333333,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "SOFIIA VAN DER VIR·"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 14.444444444444443,
+    "width": 12.63888888888889,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INTERIOR ARCHITECTURE PORTFOLIO"
+   },
+   {
+    "top": 6.425041186161449,
+    "left": 85.0925925925926,
+    "width": 8.37962962962963,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INFORMATION + ACCESS"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 6.481481481481481,
+    "width": 5.787037037037037,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "HALLE FUER ALLE"
+   },
+   {
+    "top": 91.84514003294892,
+    "left": 92.68518518518518,
+    "width": 0.8333333333333334,
+    "height": 1.2355848434925865,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "07"
+   },
+   {
+    "top": 10.955518945634267,
+    "left": 6.481481481481481,
+    "width": 9.675925925925926,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INFORMATION SYSTEM"
+   },
+   {
+    "top": 14.991762767710048,
+    "left": 6.481481481481481,
+    "width": 16.52777777777778,
+    "height": 4.7775947281713345,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "INFO POINTS"
+   },
+   {
+    "top": 20.675453047775946,
+    "left": 6.481481481481481,
+    "width": 23.84259259259259,
+    "height": 4.7775947281713345,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "UND BOOKING APP"
+   },
+   {
+    "top": 26.112026359143325,
+    "left": 6.481481481481481,
+    "width": 24.074074074074073,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Neben der raeumlichen Revitalisierung werden"
+   },
+   {
+    "top": 28.5831960461285,
+    "left": 6.481481481481481,
+    "width": 32.407407407407405,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Informationspunkte und eine Booking-App dargestellt. Dadurch"
+   },
+   {
+    "top": 31.13673805601318,
+    "left": 6.481481481481481,
+    "width": 30.09259259259259,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "wird das Projekt nicht nur als Innenraum, sondern auch als"
+   },
+   {
+    "top": 33.60790774299836,
+    "left": 6.481481481481481,
+    "width": 20.324074074074076,
+    "height": 2.14168039538715,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "zugängliches Nutzungssystem gedacht."
+   },
+   {
+    "top": 83.19604612850083,
+    "left": 6.388888888888888,
+    "width": 27.22222222222222,
+    "height": 2.224052718286656,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "Die Halle fuer Alle wird als offener, nutzbarer und"
+   },
+   {
+    "top": 85.667215815486,
+    "left": 6.388888888888888,
+    "width": 16.296296296296298,
+    "height": 2.224052718286656,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "vermittelbarer Ort entwickelt."
+   }
+  ],
+  "images": [
+   {
+    "top": 0.0,
+    "left": 0.0,
+    "width": 0.3703703703703704,
+    "height": 100.08237232289952,
+    "src": "/pdf-extract/p24-img0.png",
+    "pxW": 8.0,
+    "pxH": 1215.0
+   },
+   {
+    "top": 37.23228995057661,
+    "left": 3.3796296296296298,
+    "width": 33.657407407407405,
+    "height": 42.33937397034596,
+    "src": "/pdf-extract/p24-img1.jpg",
+    "pxW": 727.0,
+    "pxH": 514.0
+   },
+   {
+    "top": 29.32454695222405,
+    "left": 46.52777777777778,
+    "width": 47.87037037037037,
+    "height": 44.81054365733114,
+    "src": "/pdf-extract/p24-img2.png",
+    "pxW": 1034.0,
+    "pxH": 544.0
+   }
+  ]
+ },
+ {
+  "page": 25,
+  "pageW": 2160.0,
+  "pageH": 1214.0,
+  "texts": [
+   {
+    "top": 23.805601317957166,
+    "left": 5.601851851851851,
+    "width": 6.388888888888888,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "K O N T A K T"
+   },
+   {
+    "top": 28.747940691927514,
+    "left": 5.185185185185185,
+    "width": 12.037037037037036,
+    "height": 8.649093904448106,
+    "fontSize": 90.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#3f4a3a",
+    "text": "Sofiia"
+   },
+   {
+    "top": 36.16144975288303,
+    "left": 5.185185185185185,
+    "width": 24.305555555555554,
+    "height": 8.649093904448106,
+    "fontSize": 90.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#3f4a3a",
+    "text": "Van der Vir"
+   },
+   {
+    "top": 55.436573311367376,
+    "left": 5.185185185185185,
+    "width": 13.00925925925926,
+    "height": 2.883031301482702,
+    "fontSize": 29.0,
+    "family": "CAAAAA+CormorantGaramond",
+    "color": "#6a6a6a",
+    "text": "Architektin · Portfolio 2026"
+   },
+   {
+    "top": 85.17298187808896,
+    "left": 5.185185185185185,
+    "width": 17.77777777777778,
+    "height": 2.471169686985173,
+    "fontSize": 25.0,
+    "family": "DAAAAA+Inter18pt",
+    "color": "#ffffff",
+    "text": "Ich freue mich auf Ihre Nachricht."
+   },
+   {
+    "top": 22.075782537067546,
+    "left": 45.83333333333333,
+    "width": 20.97222222222222,
+    "height": 5.766062602965404,
+    "fontSize": 60.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#1a1a1a",
+    "text": "Lassen Sie uns"
+   },
+   {
+    "top": 27.182866556836906,
+    "left": 45.83333333333333,
+    "width": 13.842592592592592,
+    "height": 5.766062602965404,
+    "fontSize": 60.0,
+    "family": "BAAAAA+DejaVuSerif",
+    "color": "#1a1a1a",
+    "text": "sprechen."
+   },
+   {
+    "top": 54.03624382207578,
+    "left": 45.83333333333333,
+    "width": 4.768518518518518,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "E - M A I L"
+   },
+   {
+    "top": 53.45963756177924,
+    "left": 58.333333333333336,
+    "width": 16.75925925925926,
+    "height": 3.3772652388797364,
+    "fontSize": 34.0,
+    "family": "EAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "sofiia.vandervir@gmail.com"
+   },
+   {
+    "top": 62.35584843492587,
+    "left": 45.83333333333333,
+    "width": 5.9259259259259265,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "T E L E F O N"
+   },
+   {
+    "top": 61.86161449752883,
+    "left": 58.333333333333336,
+    "width": 10.37037037037037,
+    "height": 3.3772652388797364,
+    "fontSize": 34.0,
+    "family": "EAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "+49 157 53510064"
+   },
+   {
+    "top": 70.67545304777595,
+    "left": 45.83333333333333,
+    "width": 2.7314814814814814,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "W E B"
+   },
+   {
+    "top": 70.18121911037892,
+    "left": 58.333333333333336,
+    "width": 15.416666666666668,
+    "height": 3.3772652388797364,
+    "fontSize": 34.0,
+    "family": "EAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "www.sofiiavandervir.com"
+   },
+   {
+    "top": 78.99505766062603,
+    "left": 45.83333333333333,
+    "width": 4.953703703703704,
+    "height": 2.059308072487644,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "S T U D I O"
+   },
+   {
+    "top": 78.50082372322899,
+    "left": 58.333333333333336,
+    "width": 14.212962962962964,
+    "height": 3.3772652388797364,
+    "fontSize": 34.0,
+    "family": "EAAAAA+CormorantGaramond",
+    "color": "#1a1a1a",
+    "text": "Stuttgart · Deutschland"
+   },
+   {
+    "top": 94.89291598023064,
+    "left": 45.83333333333333,
+    "width": 12.5,
+    "height": 1.5650741350906094,
+    "fontSize": 14,
+    "family": "",
+    "color": "#000000",
+    "text": "2 0   /   2 0     ·     E N D E     ·     D A N K E"
+   }
+  ],
+  "images": []
+ }
+]

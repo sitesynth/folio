@@ -1,49 +1,429 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import pages from "../data/pdf-pages.json";
 
-const TOTAL_PAGES = 25;
-
-type SlideInfo = {
-  page: number;
-  headerRight: string;
-  footerLeft: string;
-  cover?: boolean;   // bottom-bar only, no text
-  plain?: boolean;   // no overlay at all
-  imgCaption?: string; // extra caption label shown in top-right header area
+type PdfText = {
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+  fontSize: number;
+  family: string;
+  color: string;
+  text: string;
 };
 
-const SLIDES: SlideInfo[] = [
-  { page: 1,  headerRight: "",                           footerLeft: "",                                    cover: true },
-  { page: 2,  headerRight: "INHALT",                     footerLeft: "SOFIIA VAN DER VIR" },
-  { page: 3,  headerRight: "",                           footerLeft: "SOFIIA VAN DER VIR" },
-  { page: 4,  headerRight: "PROJEKTAUFTAKT",             footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM", imgCaption: "PROJEKTBILD / VISUALISIERUNG" },
-  { page: 5,  headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 6,  headerRight: "LAGERPLANMODELL",            footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 7,  headerRight: "KONZEPT",                    footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 8,  headerRight: "WOHNKONZEPT",                footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 9,  headerRight: "WOHNKONZEPT",                footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 10, headerRight: "WOHNKONZEPT",                footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 11, headerRight: "GEMEINSCHAFTSHAUS",          footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 12, headerRight: "THERAPIEHAUS",               footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
-  { page: 13, headerRight: "PROJEKTAUFTAKT",             footerLeft: "LIVING IN A PROMINENT LOCATION" },
-  { page: 14, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
-  { page: 15, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
-  { page: 16, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
-  { page: 17, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
-  { page: 18, headerRight: "GRUNDRISSE",                 footerLeft: "LIVING IN A PROMINENT LOCATION" },
-  { page: 19, headerRight: "PROJEKTAUFTAKT",             footerLeft: "HALLE FÜR ALLE" },
-  { page: 20, headerRight: "KONZEPT",                    footerLeft: "HALLE FÜR ALLE" },
-  { page: 21, headerRight: "KONTEXT + BESTANDSGEBÄUDE",  footerLeft: "HALLE FÜR ALLE" },
-  { page: 22, headerRight: "GRUNDRISSE + SCHNITT",       footerLeft: "HALLE FÜR ALLE" },
-  { page: 23, headerRight: "INNENARCHITEKTUR",           footerLeft: "HALLE FÜR ALLE" },
-  { page: 24, headerRight: "INFORMATION + ZUGÄNGLICHKEIT",footerLeft: "HALLE FÜR ALLE" },
-  { page: 25, headerRight: "",                           footerLeft: "" },
-];
+type PdfImage = {
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+  src: string;
+};
+
+type PdfPageData = {
+  page: number;
+  pageW: number;
+  pageH: number;
+  texts: PdfText[];
+  images: PdfImage[];
+};
+
+const TOTAL_PAGES = pages.length;
+const PAGE_ASPECT = (pages[0] as PdfPageData).pageW / (pages[0] as PdfPageData).pageH;
+
+const PAGE_COUNTER_RE = /^\d{1,2}\s*\/\s*\d{1,2}$/;
+
+function fontFamilyFor(family: string) {
+  return /Serif|Cormorant|Garamond/i.test(family)
+    ? "var(--font-cormorant), Georgia, \"Times New Roman\", serif"
+    : "var(--font-inter), Arial, sans-serif";
+}
+
+// The PDF renders letter-spaced uppercase labels with real space characters:
+// a single space between glyphs, 3 spaces between words (e.g.
+// "S O F I I A   V A N   D E R   V I R"). Detect that pattern and rebuild
+// real words + CSS letter-spacing instead of showing every letter isolated.
+function isLetterSpaced(raw: string) {
+  const tokens = raw.trim().split(/\s+/).filter(Boolean);
+  if (tokens.length < 3) return false;
+  const singleCharCount = tokens.filter((t) => t.length === 1).length;
+  return singleCharCount / tokens.length > 0.6;
+}
+
+function reconstructLetterSpaced(raw: string) {
+  return raw
+    .trim()
+    .split(/\s{2,}/)
+    .filter(Boolean)
+    .map((word) => word.replace(/ /g, ""))
+    .join(" ");
+}
+
+// Skip the repeated footer-left name ("SOFIIA VAN DER VIR") — already in the header
+function isFooterLeftText(t: PdfText) {
+  return t.top > 90 && t.left < 20;
+}
+
+// Page counter (bottom-right) is shown in the rail instead
+function isPageCounterText(t: PdfText) {
+  return t.top > 90 && t.left > 75;
+}
+
+// Per-slide texts to suppress (overlaid section labels, etc.)
+const SLIDE_HIDDEN_TEXTS: Record<number, Set<string>> = {
+  4: new Set(["PROJEKTBILD / VISUALISIERUNG"]),
+};
+
+// Chapter number label (e.g. "01", "02") — small number top-left of content, not in topbar
+function isChapterLabel(t: PdfText) {
+  return /^0\s*\d$/.test(t.text.trim()) && t.top > 10 && t.top < 22 && t.left < 15;
+}
+const CHAPTER_LABEL_COLOR = '#9a8878';
+function chapterLabelStyle(t: PdfText, pageW: number) {
+  return {
+    fontSize: `${(t.fontSize / pageW) * 100}cqw`,
+    fontFamily: "var(--font-inter), Arial, sans-serif",
+    fontWeight: '600' as const,
+    color: CHAPTER_LABEL_COLOR,
+  };
+}
+
+function isTopbarText(t: PdfText) {
+  return t.top < 8;
+}
+
+// All-uppercase sans-serif label (eyebrow, data key) → needs extra weight
+function isUppercaseLabel(t: PdfText) {
+  if (isTopbarText(t) || isChapterLabel(t)) return false;
+  const raw = t.text.trim();
+  return raw.length > 2 && raw === raw.toUpperCase() && /[A-ZÄÖÜ]/.test(raw) && !/Serif/i.test(t.family);
+}
+
+// Build right-side label for each page from PDF data; override manually where needed
+function extractRightLabel(data: PdfPageData): string {
+  const t = data.texts.find(t => isTopbarText(t) && t.left > 50);
+  if (!t) return '';
+  return isLetterSpaced(t.text) ? reconstructLetterSpaced(t.text) : t.text.replace(/\s+/g, ' ').trim();
+}
+
+const PAGE_LABELS: Record<number, string> = {};
+(pages as PdfPageData[]).forEach((p: PdfPageData) => {
+  PAGE_LABELS[p.page] = extractRightLabel(p);
+});
+PAGE_LABELS[2] = 'Inhalt';
+PAGE_LABELS[3] = 'Über mich';
+
+const TOPBAR_STYLE: React.CSSProperties = {
+  position: 'absolute',
+  top: 0, left: 0, right: 0,
+  height: '8%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  padding: '0 6.5%',
+  pointerEvents: 'none',
+  zIndex: 2,
+};
+const TOPBAR_TEXT_STYLE: React.CSSProperties = {
+  fontFamily: 'var(--font-inter), Arial, sans-serif',
+  fontSize: '0.74cqw',
+  letterSpacing: '0.1em',
+  lineHeight: '1',
+  whiteSpace: 'nowrap',
+  fontWeight: 400,
+};
+
+// White bar at the bottom of each slide — creates uniform bottom margin, masks footer zone
+function SlideFooterGuard({ page }: { page: number }) {
+  if (page === 1) return null;
+  return (
+    <div style={{
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: '9%',
+      background: '#fff',
+      zIndex: 3,
+      pointerEvents: 'none',
+    }} />
+  );
+}
+
+function SlideTopbar({ page }: { page: number }) {
+  if (page === 1) return null;
+  const label = PAGE_LABELS[page] ?? '';
+  return (
+    <div style={TOPBAR_STYLE}>
+      <span style={{ ...TOPBAR_TEXT_STYLE, color: '#1a1a1a' }}>SOFIIA VAN DER VIR · PORTFOLIO 2026</span>
+      {label && <span style={{ ...TOPBAR_TEXT_STYLE, color: '#6a6a6a' }}>{label.toUpperCase()}</span>}
+    </div>
+  );
+}
+
+function normalizeText(raw: string, page: number) {
+  const cleaned = raw.trim().replace(/\s+/g, "");
+  if (PAGE_COUNTER_RE.test(cleaned)) {
+    return `${String(page).padStart(2, "0")} / ${TOTAL_PAGES}`;
+  }
+  if (isLetterSpaced(raw)) {
+    return reconstructLetterSpaced(raw);
+  }
+  return raw.replace(/\s+/g, " ").trim();
+}
+
+function PdfPage({ data }: { data: PdfPageData }) {
+  return (
+    <div className="pdf-page">
+      {data.images
+        .filter(im => im.width > 1 && im.height > 1)
+        .map((im, i) => (
+        <img
+          key={i}
+          src={im.src}
+          alt=""
+          style={{
+            position: "absolute",
+            left: `${im.left}%`,
+            top: `${im.top}%`,
+            width: `${im.width}%`,
+            height: `${im.height}%`,
+            objectFit: "fill",
+          }}
+        />
+      ))}
+      {data.texts
+        .filter(t => !isFooterLeftText(t) && !isPageCounterText(t) && !isTopbarText(t) && !SLIDE_HIDDEN_TEXTS[data.page]?.has(t.text.trim()))
+        .map((t, i) => {
+          const st = isChapterLabel(t)
+            ? chapterLabelStyle(t, data.pageW)
+            : {
+                fontSize: `${(t.fontSize / data.pageW) * 100}cqw`,
+                fontFamily: fontFamilyFor(t.family),
+                letterSpacing: isLetterSpaced(t.text) ? "0.14em" : undefined,
+                color: t.color,
+                fontWeight: isUppercaseLabel(t) ? 600 : /Serif/i.test(t.family) && t.fontSize >= 40 ? 500 : undefined,
+              };
+          return (
+            <span
+              key={i}
+              style={{
+                position: "absolute",
+                left: `${t.left}%`,
+                top: `${t.top}%`,
+                whiteSpace: "nowrap",
+                lineHeight: 1.15,
+                ...st,
+              }}
+            >
+              {normalizeText(t.text, data.page)}
+            </span>
+          );
+        })}
+    </div>
+  );
+}
+
+function CoverSlide({ data }: { data: PdfPageData }) {
+  const img = data.images[0];
+  const byText = (needle: string) => data.texts.find((t) => t.text.trim() === needle);
+  const line1 = data.texts[0]; // "Architektur"
+  const line2 = data.texts[1]; // "portfolio"
+  const label = byText("P O R T F O L I O   —   2 0 2 6") ?? data.texts[2];
+  const name = byText("Sofiia Van der Vir") ?? data.texts[3];
+  const year = byText("M M X X V I") ?? data.texts[4];
+
+  const pos = (t: PdfText) => ({
+    position: "absolute" as const,
+    left: `${t.left}%`,
+    top: `${t.top}%`,
+    fontSize: `${(t.fontSize / data.pageW) * 100}cqw`,
+    color: t.color,
+  });
+
+  return (
+    <div className="pdf-page cover-slide">
+      {img && (
+        <img
+          src={img.src}
+          alt=""
+          style={{
+            position: "absolute",
+            left: "68%",
+            top: `${img.top}%`,
+            width: `${img.width}%`,
+            height: `${img.height}%`,
+            objectFit: "fill",
+          }}
+        />
+      )}
+      {label && (
+        <span className="cover-label" style={pos(label)}>PORTFOLIO — 2026</span>
+      )}
+      {line1 && (
+        <span className="cover-title" style={pos(line1)}>Architektur</span>
+      )}
+      {line2 && (
+        <span className="cover-title" style={pos(line2)}>portfolio</span>
+      )}
+      <div className="cover-rule" />
+      {name && (
+        <span className="cover-name" style={pos(name)}>Sofiia Van der Vir</span>
+      )}
+      {year && (
+        <span className="cover-year" style={pos(year)}>MMXXVI</span>
+      )}
+    </div>
+  );
+}
+
+// ── Slide 3: About / CV ──────────────────────────────────────────────────────
+
+// pdftohtml misreads the large Cormorant headings as fs=14; override them.
+const ABOUT_SECTION_HEADS = new Set(["Ausbildung", "Software"]);
+const ABOUT_TITLE = "Über mich";
+const ABOUT_SCHOOL_NAMES = new Set([
+  "Fachhochschule Aachen",
+  "Bachelor of Arts Architektur",
+  "Fachhochschule Düsseldorf",
+  "Master of Arts Innenarchitektur",
+]);
+const ABOUT_YEAR_RE = /^\d{4}-\d{4}/;
+const ABOUT_CATEGORY_LABELS = new Set([
+  "AVA-Software", "BIM & 2D Software", "3D Software",
+  "Visualisierung", "Bildbearbeitung",
+]);
+
+function aboutTextStyle(t: PdfText, pageW: number) {
+  const raw = t.text.trim();
+  const cormorant = 'var(--font-cormorant), Georgia, serif';
+  const inter = 'var(--font-inter), Arial, sans-serif';
+  if (raw === ABOUT_TITLE)
+    return { fontSize: `${(108 / pageW) * 100}cqw`, fontFamily: cormorant, color: '#1a1a1a' };
+  if (isChapterLabel(t))
+    return chapterLabelStyle(t, pageW);
+  if (ABOUT_SECTION_HEADS.has(raw))
+    return { fontSize: `${(35 / pageW) * 100}cqw`, fontFamily: cormorant, color: t.color };
+  if (ABOUT_SCHOOL_NAMES.has(raw))
+    return { fontSize: `${(44 / pageW) * 100}cqw`, fontFamily: cormorant, color: t.color };
+  if (ABOUT_YEAR_RE.test(raw))
+    return { fontSize: `${(20 / pageW) * 100}cqw`, fontFamily: inter, color: t.color };
+  if (ABOUT_CATEGORY_LABELS.has(raw))
+    return { fontSize: `${(t.fontSize / pageW) * 100}cqw`, fontFamily: inter, color: "#8a8a8a" };
+  return {
+    fontSize: `${(t.fontSize / pageW) * 100}cqw`,
+    fontFamily: fontFamilyFor(t.family),
+    color: t.color,
+  };
+}
+
+function AboutSlide({ data }: { data: PdfPageData }) {
+  const portrait = data.images[0];
+  // Clip portrait to bottom of last content row (~79%), not footer
+  const portraitHeight = portrait ? Math.min(portrait.height, 79 - portrait.top) : 0;
+  return (
+    <div className="pdf-page">
+      {portrait && (
+        <img
+          src={portrait.src}
+          alt=""
+          style={{
+            position: "absolute",
+            left: `${portrait.left}%`,
+            top: `${portrait.top}%`,
+            width: `${portrait.width}%`,
+            height: `${portraitHeight}%`,
+            objectFit: "cover",
+            objectPosition: "top",
+          }}
+        />
+      )}
+      {data.texts
+        .filter(t => !isFooterLeftText(t) && !isPageCounterText(t) && !isTopbarText(t))
+        .map((t, i) => {
+          const st = aboutTextStyle(t, data.pageW);
+          return (
+            <span
+              key={i}
+              style={{
+                position: "absolute",
+                left: `${t.left}%`,
+                top: `${t.top}%`,
+                whiteSpace: "nowrap",
+                lineHeight: 1.15,
+                letterSpacing: isLetterSpaced(t.text) ? "0.14em" : (st as Record<string,string>).letterSpacing,
+                ...st,
+              }}
+            >
+              {normalizeText(t.text, data.page)}
+            </span>
+          );
+        })}
+    </div>
+  );
+}
+
+// Separator lines between index rows — top (6.46%) and bottom (93.51%) removed per design
+const INDEX_RULE_TOPS = [40.72, 50.0, 59.25, 68.49, 77.77, 87.05];
+
+function IndexSlide({ data }: { data: PdfPageData }) {
+  return (
+    <div className="pdf-page">
+      {data.images.map((im, i) => (
+        <img
+          key={i}
+          src={im.src}
+          alt=""
+          style={{
+            position: "absolute",
+            left: `${im.left}%`,
+            top: `${im.top}%`,
+            width: `${im.width}%`,
+            height: `${im.height}%`,
+            objectFit: "fill",
+          }}
+        />
+      ))}
+      {data.texts
+        .filter(t => !isFooterLeftText(t) && !isPageCounterText(t) && !isTopbarText(t) && normalizeText(t.text, data.page) !== "INDEX")
+        .map((t, i) => {
+          // Right-column descriptors (70–89%) shifted left for rail clearance
+          const left = t.left > 70 && t.left < 89 ? t.left - 8 : t.left;
+          const st = {
+            fontSize: `${(t.fontSize / data.pageW) * 100}cqw`,
+            fontFamily: fontFamilyFor(t.family),
+            letterSpacing: isLetterSpaced(t.text) ? "0.14em" : undefined,
+            color: t.color,
+          };
+          return (
+            <span
+              key={i}
+              style={{
+                position: "absolute",
+                left: `${left}%`,
+                top: `${t.top}%`,
+                whiteSpace: "nowrap",
+                lineHeight: 1.15,
+                ...st,
+              }}
+            >
+              {normalizeText(t.text, data.page)}
+            </span>
+          );
+        })}
+      {INDEX_RULE_TOPS.map((top, i) => (
+        <div key={i} className="page-rule" style={{ top: `${top}%` }} />
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const currentRef = useRef<HTMLSpanElement>(null);
+  const railCounterRef = useRef<HTMLSpanElement>(null);
   const fillRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -62,6 +442,7 @@ export default function Home() {
             const idx = slides.indexOf(e.target as HTMLElement);
             if (idx >= 0) {
               if (currentEl) currentEl.textContent = String(idx + 1).padStart(2, "0");
+              if (railCounterRef.current) railCounterRef.current.textContent = `${String(idx + 1).padStart(2, "0")} / ${TOTAL_PAGES}`;
               if (fillEl) fillEl.style.width = `${((idx + 1) / TOTAL_PAGES) * 100}%`;
               dots.forEach((d, i) => d.classList.toggle("current", i === idx));
             }
@@ -82,57 +463,34 @@ export default function Home() {
       </div>
 
       <div className="slides-scroller" ref={scrollerRef} tabIndex={0}>
-        {SLIDES.map((slide) => {
-          const n = String(slide.page).padStart(2, "0");
-          const src = `/pdf-slides/pdfpage-${n}.png`;
-          const counter = `${n} / ${TOTAL_PAGES}`;
-
-          return (
-            <div key={slide.page}>
-              <div className="portfolio-slide">
-                <div className="pdf-slide-wrap">
-                  <img
-                    className="pdf-slide-img"
-                    src={src}
-                    alt={`Portfolio page ${slide.page}`}
-                    loading={slide.page <= 3 ? "eager" : "lazy"}
-                  />
-
-                  {/* Cover: bottom bar only to hide MMXXVI */}
-                  {slide.cover && (
-                    <div className="slide-bar slide-bar-bottom slide-bar-blank" />
-                  )}
-
-                  {/* Standard pages: top + bottom bars */}
-                  {!slide.plain && !slide.cover && (
-                    <>
-                      <div className={`slide-bar slide-bar-top${slide.imgCaption ? " slide-bar-tall" : ""}`}>
-                        <span>SOFIIA VAN DER VIR · PORTFOLIO 2026</span>
-                        <span className="bar-right-col">
-                          <span>{slide.headerRight}</span>
-                          {slide.imgCaption && (
-                            <span className="bar-img-caption">{slide.imgCaption}</span>
-                          )}
-                        </span>
-                      </div>
-                      <div className="slide-bar slide-bar-bottom">
-                        <span>{slide.footerLeft}</span>
-                        <span>{counter}</span>
-                      </div>
-                    </>
+        {(pages as PdfPageData[]).map((pd) => (
+          <div key={pd.page}>
+            <div className="portfolio-slide">
+              <div className="pdf-page-outer" style={{ width: 'calc(100% - 4.5rem)' }}>
+                <div className="pdf-page-scaler" style={{ aspectRatio: PAGE_ASPECT }}>
+                  <SlideTopbar page={pd.page} />
+                  <SlideFooterGuard page={pd.page} />
+                  {pd.page === 1 ? (
+                    <CoverSlide data={pd} />
+                  ) : pd.page === 2 ? (
+                    <IndexSlide data={pd} />
+                  ) : pd.page === 3 ? (
+                    <AboutSlide data={pd} />
+                  ) : (
+                    <PdfPage data={pd} />
                   )}
                 </div>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
 
       <aside className="progress-rail">
         <span className="rail-label">SCROLL / NAVIGATE</span>
         <span className="rail-current" ref={currentRef}>01</span>
         <div className="rail-dots">
-          {SLIDES.map(({ page }) => (
+          {(pages as PdfPageData[]).map(({ page }) => (
             <button
               key={page}
               aria-label={`Go to page ${page}`}
@@ -162,6 +520,7 @@ export default function Home() {
           </svg>
         </a>
       </aside>
+      <span className="rail-page-counter" ref={railCounterRef}>01 / {TOTAL_PAGES}</span>
     </div>
   );
 }
