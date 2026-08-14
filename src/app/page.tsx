@@ -1,725 +1,167 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
-import recon from "../data/canva-recon-full.json";
-import assets from "../../docs/research/canva-portfolio/asset-manifest.json";
+import { useEffect, useRef } from "react";
 
-type PageData = (typeof recon.pages)[number];
-type ImageNode = PageData["images"][number];
+const TOTAL_PAGES = 25;
 
-const TOTAL_PAGES = recon.pages.length;
-
-const PAGE_COUNTER_RE = /^\d{1,2}(\s*\/\s*\d{1,2})?$/;
-const FOOTER_PROJECT_CAPTIONS = [
-  "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM",
-  "LIVING IN A PROMINENT LOCATION",
-  "HALLE FUER ALLE",
-  "SOFIIA VAN DER VIR",
-];
-
-const TEXT_CORRECTIONS: Record<string, string> = {
-  "Das ProjektbefindetsichaufdemGeländeeinesehemaligenBahnhofs": "Das Projekt befindet sich auf dem Gelände eines ehemaligen Bahnhofs",
-  // Slide 15: merged word bug + continuation was split across two text nodes
-  "DasfünfeckigeGrundstückliegtzwischenzwei Straßen mit deutlich": "Das fünfeckige Grundstück liegt zwischen zwei Straßen mit deutlich unterschiedlichem Charakter.",
-  "unterschiedlichem Charakter.": "", // absorbed into the corrected node above
-};
-
-const TITLE_OVERRIDES: Record<number, string> = {
-  18: "ACCESS GALLERY",
-};
-
-function cleanText(value: string) {
-  const s = value.replace(/\s+/g, " ").trim();
-  return TEXT_CORRECTIONS[s] ?? s;
-}
-
-function imageUrl(src: string) {
-  return (assets.manifest as Record<string, string>)[src];
-}
-
-// Canva design-element icons (≤1.3KB) — not real drawings; exclude from fallback rendering
-const ICON_FILENAMES = new Set([
-  "66c561f3-d7a6-4d2e-b152-efde3312c2f0.png",
-  "25f306b9-7ce3-481e-a2f1-598941ff5276.png",
-  "3f7027e4-aa35-4cd8-9e38-026a7e1a6970.png",
-  "0a4253da-15b8-468f-83a1-837d7837f142.png",
-  "7123ad67-4853-4ecc-b162-92987e3cacdf.png",
-  "8df7756b-223a-4d50-bd5b-3759385cc2a3.png",
-  "6f4902e5-6b46-49e3-bf87-62c20e87080a.png",
-  "03a1858d-a5da-4e0e-b6c4-73b5822b998f.png",
-  "4d95d90e-faaf-4848-bb16-096f286acdb5.png",
-  "5a022654-5b8b-4063-97a9-f8f0ad166c05.png",
-  "980d84d9-aa03-4705-bd0c-c97c4d74562f.png",
-  "9f76f635-0740-4b42-af44-d512be29d9d6.png",
-]);
-
-function isLocalUrl(url: string | undefined) {
-  return !!url && url.startsWith("/") && !url.startsWith("//");
-}
-
-function isIconUrl(url: string | undefined) {
-  if (!url) return false;
-  const filename = url.split("/").pop() ?? "";
-  return ICON_FILENAMES.has(filename);
-}
-
-function validRect(rect: { width: number; height: number; x: number; y: number }, xMin = -50) {
-  return rect.width > 50 && rect.height > 50 && rect.x > xMin && rect.y > -50;
-}
-
-function isLabelLike(s: string) {
-  if (!s) return false;
-  if (s.length > 40) return false;
-  if (/[.!?]$/.test(s)) return false;
-  return true;
-}
-
-function projectCaptionFor(page: number) {
-  if (page >= 4 && page <= 13) return "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM";
-  if (page >= 14 && page <= 19) return "LIVING IN A PROMINENT LOCATION";
-  if (page >= 20 && page <= 26) return "HALLE FUER ALLE";
-  return "SOFIIA VAN DER VIR · PORTFOLIO 2026";
-}
-
-interface ContentModel {
-  headerLeft: string;
+type SlideInfo = {
+  page: number;
   headerRight: string;
   footerLeft: string;
-  footerRight: string;
-  eyebrow: string;
-  title: string;
-  paras: string[];
-  listHeading: string;
-  rows: { label: string; desc: string }[];
-}
+  cover?: boolean;   // bottom-bar only, no text
+  plain?: boolean;   // no overlay at all
+  imgCaption?: string; // extra caption label shown in top-right header area
+};
 
-function extractContent(page: PageData): ContentModel {
-  const raw = page.textNodes.map((n) => cleanText(n.text)).filter(Boolean);
-  const used = new Array(raw.length).fill(false);
-
-  let footerRight = "";
-  for (let i = raw.length - 1; i >= 0; i--) {
-    if (!used[i] && PAGE_COUNTER_RE.test(raw[i])) {
-      footerRight = raw[i];
-      used[i] = true;
-      break;
-    }
-  }
-
-  let footerLeft = "";
-  let footerLeftIdx = -1;
-  for (let i = 0; i < raw.length; i++) {
-    if (used[i]) continue;
-    if (FOOTER_PROJECT_CAPTIONS.includes(raw[i])) {
-      footerLeft = raw[i];
-      footerLeftIdx = i;
-      used[i] = true;
-      break;
-    }
-  }
-
-  let headerLeft = "";
-  let headerRight = "";
-  let headerLeftEndIdx = -1;
-  if (raw.length && !used[0]) {
-    if (/SOFIIA VAN DER VIR/i.test(raw[0])) {
-      if (raw[0].trim().endsWith("·") && raw[1] && /PORTFOLIO/i.test(raw[1])) {
-        headerLeft = `${raw[0]} ${raw[1]}`;
-        used[0] = true;
-        used[1] = true;
-        headerLeftEndIdx = 1;
-      } else {
-        headerLeft = raw[0];
-        used[0] = true;
-        headerLeftEndIdx = 0;
-      }
-    } else if (/^\d{1,2}$/.test(raw[0])) {
-      headerLeft = raw[0];
-      used[0] = true;
-      headerLeftEndIdx = 0;
-    }
-  }
-
-  if (footerLeftIdx !== -1 && raw[footerLeftIdx + 1] && !used[footerLeftIdx + 1] && raw[footerLeftIdx + 1].length <= 40) {
-    headerRight = raw[footerLeftIdx + 1];
-    used[footerLeftIdx + 1] = true;
-  } else if (headerLeftEndIdx !== -1 && raw[headerLeftEndIdx + 1] && !used[headerLeftEndIdx + 1] && raw[headerLeftEndIdx + 1].length <= 40) {
-    headerRight = raw[headerLeftEndIdx + 1];
-    used[headerLeftEndIdx + 1] = true;
-  }
-
-  const pool = raw.filter((_, i) => !used[i]);
-
-  let eyebrow = "";
-  let title = "";
-  let cursor = 0;
-  if (pool.length === 1) {
-    title = pool[0];
-    cursor = 1;
-  } else if (pool.length > 1) {
-    if (isLabelLike(pool[0])) {
-      eyebrow = pool[0];
-      cursor = 1;
-    }
-    if (pool[cursor] && pool[cursor].length <= 55) {
-      title = pool[cursor];
-      cursor++;
-      if (title.length <= 20 && pool[cursor] && isLabelLike(pool[cursor])) {
-        title += " " + pool[cursor];
-        cursor++;
-      }
-    }
-  }
-
-  const rest = pool.slice(cursor);
-  let paras: string[] = [];
-  const rows: { label: string; desc: string }[] = [];
-  for (let i = 0; i < rest.length; i++) {
-    const cur = rest[i];
-    const next = rest[i + 1];
-    if (isLabelLike(cur) && next && !isLabelLike(next)) {
-      rows.push({ label: cur, desc: next });
-      i++;
-    } else {
-      paras.push(cur);
-    }
-  }
-
-  let listHeading = "";
-  if (rows.length > 0 && paras.length > 0) {
-    const last = paras[paras.length - 1];
-    if (last.length <= 30) {
-      listHeading = last;
-      paras = paras.slice(0, -1);
-    }
-  }
-
-  return {
-    headerLeft: headerLeft || "SOFIIA VAN DER VIR · PORTFOLIO 2026",
-    headerRight,
-    footerLeft: footerLeft || projectCaptionFor(page.page),
-    footerRight: footerRight || `${String(page.page).padStart(2, "0")} / ${TOTAL_PAGES}`,
-    eyebrow,
-    title: TITLE_OVERRIDES[page.page] ?? title,
-    paras,
-    listHeading,
-    rows,
-  };
-}
-
-function ImageLayer({ page, max = 14 }: { page: PageData; max?: number }) {
-  const vw = page.viewport?.width || 1440;
-  const vh = page.viewport?.height || 900;
-  // Slide 09 has a wide section drawing starting slightly off-screen left (x≈-162)
-  const xMin = page.page === 9 ? -200 : -50;
-
-  const positioned = page.images
-    .filter((img: ImageNode) => imageUrl(img.src) && validRect(img.rect, xMin))
-    .slice(0, max);
-
-  // Slides confirmed to have visuals that the scraper missed (blob: URLs not captured)
-  const NEEDS_FALLBACK_IMAGES = new Set([13, 23]);
-
-  // When scraper missed rect data but files exist locally, show them as a panel grid
-  const fallbacks = (positioned.length === 0 && NEEDS_FALLBACK_IMAGES.has(page.page))
-    ? page.images
-        .filter((img: ImageNode) => {
-          const url = imageUrl(img.src);
-          return isLocalUrl(url) && !isIconUrl(url) && !validRect(img.rect);
-        })
-        .filter((img, i, arr) => arr.findIndex(x => x.src === img.src) === i) // dedupe by src
-        .slice(0, 4)
-    : [];
-
-  const cols = fallbacks.length > 2 ? 2 : 1;
-
-  return (
-    <div className="image-layer" aria-hidden="true">
-      {positioned.map((img: ImageNode, i: number) => (
-        <img
-          key={`${img.src}-${i}`}
-          src={imageUrl(img.src)!}
-          alt={img.alt || ""}
-          className="image-plate"
-          style={{
-            left: `${(img.rect.x / vw) * 100}%`,
-            top: `${(img.rect.y / vh) * 100}%`,
-            width: `${(img.rect.width / vw) * 100}%`,
-            height: `${(img.rect.height / vh) * 100}%`,
-          }}
-        />
-      ))}
-      {fallbacks.length > 0 && (
-        <div style={{
-          position: "absolute",
-          left: "46%", top: "0", right: "0", bottom: "0",
-          display: "grid",
-          gridTemplateColumns: `repeat(${cols}, 1fr)`,
-          gridTemplateRows: fallbacks.length > cols ? `repeat(${Math.ceil(fallbacks.length / cols)}, 1fr)` : "1fr",
-          gap: "3px",
-        }}>
-          {fallbacks.map((img: ImageNode, i: number) => (
-            <img
-              key={`fb-${img.src}-${i}`}
-              src={imageUrl(img.src)!}
-              alt={img.alt || ""}
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-            />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function PageBar({ left, right, top }: { left: string; right: string; top?: boolean }) {
-  return <div className={`bar ${top ? "bar-header" : "bar-footer"}`}><span>{left}</span><span>{right}</span></div>;
-}
-
-function ContentSlide({ page }: { page: PageData }) {
-  const model = useMemo(() => extractContent(page), [page]);
-  return (
-    <div className="content-page">
-      <PageBar left={model.headerLeft} right={model.headerRight} top />
-      <div className="content-area">
-        <ImageLayer page={page} />
-        <div className="text-cols fade-up">
-          <div className="text-col-main">
-            {model.eyebrow && <p className="eyebrow-label">{model.eyebrow}</p>}
-            {model.title && <h2 className="content-title">{model.title}</h2>}
-            {model.paras.map((p, i) => (
-              <p key={i} className="body-para">{p}</p>
-            ))}
-          </div>
-          {model.rows.length > 0 && (
-            <div className="text-col-list">
-              {model.listHeading && <p className="eyebrow-label">{model.listHeading}</p>}
-              {model.rows.map((r, i) => (
-                <div key={i} className="feature-row">
-                  <strong>{r.label}</strong>
-                  <span>{r.desc}</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-      <PageBar left={model.footerLeft} right={model.footerRight} />
-    </div>
-  );
-}
-
-function CoverSlide({ page }: { page: PageData }) {
-  const hero = page.images.filter((i: ImageNode) => imageUrl(i.src) && validRect(i.rect)).sort((a, b) => b.rect.width * b.rect.height - a.rect.width * a.rect.height)[0];
-  return (
-    <div className="cover-page">
-      <p className="eyebrow-label cover-kicker fade-up">PORTFOLIO — 2026</p>
-      <h1 className="cover-title fade-up">
-        Architektur
-        <br />
-        portfolio
-      </h1>
-      <div className="cover-rule fade-up" />
-      <p className="cover-name fade-up">Sofiia Van der Vir</p>
-      {hero && (
-        <img className="cover-hero fade-up" src={imageUrl(hero.src)} alt={hero.alt || ""} />
-      )}
-      <span className="cover-year fade-up">MMXXVI</span>
-      <button className="pdf-btn fade-up" onClick={() => window.print()} title="Portfolio als PDF drucken / herunterladen">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <line x1="12" y1="4" x2="12" y2="16"/><polyline points="8 12 12 16 16 12"/>
-          <line x1="6" y1="20" x2="18" y2="20"/>
-        </svg>
-        <span className="pdf-label">PDF</span>
-      </button>
-    </div>
-  );
-}
-
-const INDEX_ROWS: [string, string, string][] = [
-  ["01", "Über mich", "Kontakt & Biografie"],
-  ["02", "Frauentherapiezentrum Lüssow", "Therapiezentrum für Flüchtlingsfrauen"],
-  ["03", "Stadtbad Krefeld — Halle für Alle", "Umbau eines historischen Stadtbades"],
-  ["04", "Apartment 61", "Wohnprojekt — Innenraumdesign"],
-  ["05", "Weitere Projekte", "Auswahl studentischer Arbeiten"],
+const SLIDES: SlideInfo[] = [
+  { page: 1,  headerRight: "",                           footerLeft: "",                                    cover: true },
+  { page: 2,  headerRight: "INHALT",                     footerLeft: "SOFIIA VAN DER VIR" },
+  { page: 3,  headerRight: "",                           footerLeft: "SOFIIA VAN DER VIR" },
+  { page: 4,  headerRight: "PROJEKTAUFTAKT",             footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM", imgCaption: "PROJEKTBILD / VISUALISIERUNG" },
+  { page: 5,  headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 6,  headerRight: "LAGERPLANMODELL",            footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 7,  headerRight: "KONZEPT",                    footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 8,  headerRight: "WOHNKONZEPT",                footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 9,  headerRight: "WOHNKONZEPT",                footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 10, headerRight: "WOHNKONZEPT",                footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 11, headerRight: "GEMEINSCHAFTSHAUS",          footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 12, headerRight: "THERAPIEHAUS",               footerLeft: "DORF, HOF, HEILUNG — FRAUENTHERAPIEZENTRUM" },
+  { page: 13, headerRight: "PROJEKTAUFTAKT",             footerLeft: "LIVING IN A PROMINENT LOCATION" },
+  { page: 14, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
+  { page: 15, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
+  { page: 16, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
+  { page: 17, headerRight: "KONTEXT + SCHLÜSSELMERKMALE",footerLeft: "LIVING IN A PROMINENT LOCATION" },
+  { page: 18, headerRight: "GRUNDRISSE",                 footerLeft: "LIVING IN A PROMINENT LOCATION" },
+  { page: 19, headerRight: "PROJEKTAUFTAKT",             footerLeft: "HALLE FÜR ALLE" },
+  { page: 20, headerRight: "KONZEPT",                    footerLeft: "HALLE FÜR ALLE" },
+  { page: 21, headerRight: "KONTEXT + BESTANDSGEBÄUDE",  footerLeft: "HALLE FÜR ALLE" },
+  { page: 22, headerRight: "GRUNDRISSE + SCHNITT",       footerLeft: "HALLE FÜR ALLE" },
+  { page: 23, headerRight: "INNENARCHITEKTUR",           footerLeft: "HALLE FÜR ALLE" },
+  { page: 24, headerRight: "INFORMATION + ZUGÄNGLICHKEIT",footerLeft: "HALLE FÜR ALLE" },
+  { page: 25, headerRight: "",                           footerLeft: "" },
 ];
-
-function IndexSlide({ page }: { page: PageData }) {
-  return (
-    <div className="content-page">
-      <PageBar left="SOFIIA VAN DER VIR · PORTFOLIO 2026" right="INHALT" top />
-      <div className="index-body">
-        <p className="eyebrow-label fade-up">INDEX</p>
-        <h1 className="index-title fade-up">Inhalt.</h1>
-        <div className="index-rows fade-up">
-          {INDEX_ROWS.map(([num, title, note]) => (
-            <div className="index-row" key={num}>
-              <span>{num}</span>
-              <strong>{title}</strong>
-              <em>{note}</em>
-            </div>
-          ))}
-        </div>
-      </div>
-      <PageBar left="SOFIIA VAN DER VIR" right={`${String(page.page).padStart(2, "0")} / ${TOTAL_PAGES}`} />
-    </div>
-  );
-}
-
-function AboutSlide({ page }: { page: PageData }) {
-  const heroImg = page.images.filter((i: ImageNode) => imageUrl(i.src) && validRect(i.rect)).sort((a, b) => b.rect.height - a.rect.height)[0];
-  const hero = heroImg ? imageUrl(heroImg.src) : undefined;
-  return (
-    <div className="content-page">
-      <PageBar left="SOFIIA VAN DER VIR · PORTFOLIO 2026" right="02 · PROJEKT" top />
-      <div className="about-body">
-        <p className="eyebrow-label about-num fade-up">01</p>
-        <h2 className="about-title fade-up">Über mich</h2>
-        <div className="about-columns fade-up">
-          <div>
-            <h3>Ausbildung</h3>
-            <p>
-              2016–2023
-              <br />
-              <b>Fachhochschule Aachen</b>
-              <br />
-              Bachelor of Arts Architektur
-            </p>
-            <p className="about-sub">Bachelorarbeit bei Prof. Dipl.-Ing. Ulrich Eckey: Die markante Ecke – Zwischen öffentlichem Raum und privatem Rückzug</p>
-            <p>
-              2023–2025
-              <br />
-              <b>Fachhochschule Düsseldorf</b>
-              <br />
-              Master of Arts Innenarchitektur
-            </p>
-            <p className="about-sub">Masterarbeit bei Prof. Dipl.-Ing. Christiane Ern-Heinzl: Healing Architecture — Schutz- und Therapiestätten für kriegstraumatisierte Frauen</p>
-          </div>
-          <div>
-            <h3>Software</h3>
-            <p className="about-sub">AVA-Software</p>
-            <p>ORCA</p>
-            <p className="about-sub">BIM &amp; 2D Software</p>
-            <p>Revit · Vectorworks · ArchiCAD</p>
-            <p className="about-sub">3D Software</p>
-            <p>Rhinoceros · SketchUP · Grasshopper</p>
-            <p className="about-sub">Visualisierung</p>
-            <p>Enscape · Twinmotion</p>
-            <p className="about-sub">Bildbearbeitung</p>
-            <p>Illustrator · Photoshop · Indesign</p>
-          </div>
-        </div>
-        {hero && <img className="about-portrait" src={hero} alt="Sofiia Van der Vir" />}
-      </div>
-      <PageBar left="SOFIIA VAN DER VIR" right={`03 / ${TOTAL_PAGES}`} />
-    </div>
-  );
-}
-
-interface OpenerData {
-  headerLeft: string;
-  headerRight: string;
-  eyebrow: string;
-  title: string;
-  subtitle?: string;
-  lead: string;
-  rows: [string, string][];
-  footerLeft: string;
-  footerRight: string;
-}
-
-const OPENER_1: OpenerData = {
-  headerLeft: "SOFIIA VAN DER VIR · PORTFOLIO 2026",
-  headerRight: "PROJEKTAUFTAKT",
-  eyebrow: "THERAPIEZENTRUM FÜR GEFLÜCHTETE FRAUEN · LÜSSOW · JUNI 2025",
-  title: "DORF, HOF, HEILUNG",
-  lead: "Therapiezentrum für geflüchtete Frauen im ländlichen Dorf Lüssow in Mecklenburg-Vorpommern.",
-  rows: [
-    ["STANDORT", "Lüssow, Mecklenburg-Vorpommern, Deutschland"],
-    ["DATUM", "Juni 2025"],
-    ["PROJEKTART", "Therapie- und Wohnzentrum für Frauen"],
-    ["GEBÄUDEKATEGORIE", "Soziale Architektur und Wohnarchitektur"],
-    ["BAUMASSNAHME", "Umnutzung und modularer Neubau"],
-  ],
-  footerLeft: "DORF, HOF, HEILUNG - FRAUENTHERAPIEZENTRUM",
-  footerRight: "01 / 07",
-};
-
-const OPENER_2: OpenerData = {
-  headerLeft: "01",
-  headerRight: "PROJECT OPENER",
-  eyebrow: "WOHNUNGSBAU · STOLBERG-ATSCH · 2025",
-  title: "LIVING IN A PROMINENT LOCATION",
-  lead: "Neubau eines Wohngebäudes an der Kreuzung von Sebastianusstraße und Goethestraße.",
-  rows: [
-    ["STANDORT", "Stolberg-Atsch, Deutschland"],
-    ["PROJEKTART", "Wohnungsbau"],
-    ["BAUMASSNAHME", "Neubau"],
-    ["GRUNDSTÜCKSFLÄCHE", "ca. 650 m²"],
-    ["BGF", "ca. 500 m²"],
-    ["GESCHOSSIGKEIT", "4 Geschosse + Satteldach"],
-  ],
-  footerLeft: "LIVING IN A PROMINENT LOCATION",
-  footerRight: "01 / 06",
-};
-
-const OPENER_3: OpenerData = {
-  headerLeft: "SOFIIA VAN DER VIR · INTERIOR ARCHITECTURE PORTFOLIO",
-  headerRight: "PROJECT OPENER",
-  eyebrow: "KULTURELLE UND SOZIALE REVITALISIERUNG · KREFELD · FEBRUAR 2025",
-  title: "HALLE FUER ALLE",
-  subtitle: "Revitalisierung des historischen Stadtbads Krefeld",
-  lead: "Umnutzung der ehemaligen Maennerhalle zu einem offenen Ort fuer Bewegung, Begegnung und Gemeinschaft.",
-  rows: [
-    ["STANDORT", "Krefeld, Deutschland"],
-    ["DATUM", "Konzeptphase Februar 2025"],
-    ["PROJEKTART", "Cultural & Social Revitalization"],
-    ["GEBAEUDEKATEGORIE", "Heritage / Public Building"],
-    ["BAUMASSNAHME", "Adaptive Reuse / Redevelopment"],
-    ["AUSZEICHNUNG", "1. Platz · Wettbewerb Stadt Krefeld"],
-  ],
-  footerLeft: "HALLE FUER ALLE",
-  footerRight: "01 / 07",
-};
-
-function OpenerSlide({ page, data }: { page: PageData; data: OpenerData }) {
-  const vw = page.viewport?.width || 1440;
-  const vh = page.viewport?.height || 900;
-
-  const positionedHero = page.images
-    .filter((i: ImageNode) => imageUrl(i.src) && validRect(i.rect))
-    .sort((a, b) => b.rect.width * b.rect.height - a.rect.width * a.rect.height)[0];
-
-  // Fallback: use first local non-icon image if scraper missed rect data
-  const fallbackHero = !positionedHero
-    ? page.images.find((i: ImageNode) => {
-        const url = imageUrl(i.src);
-        return isLocalUrl(url) && !isIconUrl(url) && !validRect(i.rect);
-      })
-    : undefined;
-
-  const hero = positionedHero ?? fallbackHero;
-  const heroStyle = positionedHero
-    ? {
-        left: `${(positionedHero.rect.x / vw) * 100}%`,
-        top: `${(positionedHero.rect.y / vh) * 100}%`,
-        width: `${(positionedHero.rect.width / vw) * 100}%`,
-        height: `${(positionedHero.rect.height / vh) * 100}%`,
-      }
-    : { left: "48%", top: "10%", width: "49%", height: "80%" };
-
-  return (
-    <div className="content-page opener-slide">
-      <PageBar left={data.headerLeft} right={data.headerRight} top />
-      <div className="opener-body">
-        <div className="opener-text">
-          <p className="eyebrow-label fade-up">{data.eyebrow}</p>
-          <h1 className="opener-title fade-up">{data.title}</h1>
-          {data.subtitle && <p className="opener-subtitle">{data.subtitle}</p>}
-          <p className="opener-lead">{data.lead}</p>
-          <dl className="opener-dl">
-            {data.rows.map(([dt, dd]) => (
-              <div className="opener-dl-row" key={dt}>
-                <dt>{dt}</dt>
-                <dd>{dd}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        {hero && (
-          <img
-            className="opener-hero"
-            src={imageUrl(hero.src)!}
-            alt={hero.alt || ""}
-            style={heroStyle}
-          />
-        )}
-      </div>
-      <PageBar left={data.footerLeft} right={data.footerRight} />
-    </div>
-  );
-}
-
-function ContactSlide() {
-  return (
-    <div className="contact-page">
-      <div className="contact-left">
-        <p className="eyebrow-label">KONTAKT</p>
-        <h1 className="contact-name">
-          Sofiia
-          <br />
-          Van der Vir.
-        </h1>
-        <div className="cover-rule" />
-        <p className="contact-role">Architektin · Portfolio 2026</p>
-        <div className="contact-strip">
-          <p>Ich freue mich auf Ihre Nachricht.</p>
-        </div>
-      </div>
-      <div className="contact-right">
-        <h1 className="contact-heading">
-          Lassen Sie uns
-          <br />
-          sprechen.
-        </h1>
-        <dl className="contact-dl">
-          <div className="contact-dl-row">
-            <dt>E-MAIL</dt>
-            <dd>sofiia.vandervir@gmail.com</dd>
-          </div>
-          <div className="contact-dl-row">
-            <dt>TELEFON</dt>
-            <dd>+49 157 53510064</dd>
-          </div>
-          <div className="contact-dl-row">
-            <dt>WEB</dt>
-            <dd>www.sofiiavandervir.com</dd>
-          </div>
-          <div className="contact-dl-row">
-            <dt>STUDIO</dt>
-            <dd>Stuttgart · Deutschland</dd>
-          </div>
-        </dl>
-        <p className="contact-footnote">{TOTAL_PAGES} / {TOTAL_PAGES} · ENDE · DANKE</p>
-      </div>
-    </div>
-  );
-}
-
-function Slide({ page }: { page: PageData }) {
-  let body: React.ReactNode;
-  switch (page.page) {
-    case 1:
-      body = <CoverSlide page={page} />;
-      break;
-    case 2:
-      body = <IndexSlide page={page} />;
-      break;
-    case 3:
-      body = <AboutSlide page={page} />;
-      break;
-    case 4:
-      body = <OpenerSlide page={page} data={OPENER_1} />;
-      break;
-    case 14:
-      body = <OpenerSlide page={page} data={OPENER_2} />;
-      break;
-    case 20:
-      body = <OpenerSlide page={page} data={OPENER_3} />;
-      break;
-    case 27:
-      body = <ContactSlide />;
-      break;
-    default:
-      body = <ContentSlide page={page} />;
-  }
-
-  return (
-    <section id={`page-${page.page}`} className="portfolio-slide" aria-label={`Page ${page.page}`}>
-      <div className="slide-canvas">
-        <div className="grain" aria-hidden="true" />
-        {body}
-      </div>
-    </section>
-  );
-}
 
 export default function Home() {
-  const frameRef = useRef<HTMLDivElement>(null);
-  const pages = useMemo(() => recon.pages, []);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const currentRef = useRef<HTMLSpanElement>(null);
+  const fillRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const frame = frameRef.current!;
-    if (!frame) return;
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
 
-    // Slide height = frame height (100dvh each)
-    const slideH = () => frame.clientHeight;
+    const slides = Array.from(scroller.querySelectorAll<HTMLElement>(".portfolio-slide"));
+    const dots = Array.from(document.querySelectorAll<HTMLButtonElement>(".rail-dots button"));
+    const currentEl = currentRef.current;
+    const fillEl = fillRef.current;
 
-    function getActiveIndex(): number {
-      const h = slideH();
-      if (!h) return 0;
-      return Math.min(TOTAL_PAGES - 1, Math.round(frame.scrollTop / h));
-    }
-
-    function goTo(idx: number) {
-      const h = slideH();
-      frame.scrollTo({ top: idx * h, behavior: "smooth" });
-    }
-
-    function updateUI() {
-      const idx = getActiveIndex();
-      const numEl = document.querySelector<HTMLElement>(".rail-current");
-      const dotEls = document.querySelectorAll<HTMLElement>(".rail-dots button");
-      const fillEl = document.querySelector<HTMLElement>(".progress-fill");
-      if (numEl) numEl.textContent = String(idx + 1).padStart(2, "0");
-      dotEls.forEach((d, i) => d.classList.toggle("current", i === idx));
-      const total = frame.scrollHeight - frame.clientHeight;
-      if (fillEl && total > 0) fillEl.style.width = (frame.scrollTop / total * 100) + "%";
-    }
-
-    frame.addEventListener("scroll", updateUI, { passive: true });
-    updateUI();
-
-    // Dot button clicks (delegated to parent to avoid duplicate listeners)
-    const railDots = document.querySelector<HTMLElement>(".rail-dots");
-    function onDotClick(e: MouseEvent) {
-      const btn = (e.target as HTMLElement).closest("button");
-      if (!btn || !railDots) return;
-      const idx = Array.from(railDots.querySelectorAll("button")).indexOf(btn);
-      if (idx >= 0) goTo(idx);
-    }
-    railDots?.addEventListener("click", onDotClick);
-
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.target instanceof Element && e.target.closest("input,textarea,[contenteditable]")) return;
-      const fwd = ["ArrowDown", "PageDown", " "].includes(e.key);
-      const bck = ["ArrowUp", "PageUp"].includes(e.key);
-      if (!fwd && !bck && e.key !== "Home" && e.key !== "End") return;
-      e.preventDefault();
-      const cur = getActiveIndex();
-      const next = e.key === "Home" ? 0 : e.key === "End" ? TOTAL_PAGES - 1 : fwd ? Math.min(TOTAL_PAGES - 1, cur + 1) : Math.max(0, cur - 1);
-      goTo(next);
-    };
-    document.addEventListener("keydown", onKeyDown);
-
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll<HTMLElement>(".fade-up").forEach((el, i) => {
-            setTimeout(() => el.classList.add("in"), i * 60);
-          });
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            const idx = slides.indexOf(e.target as HTMLElement);
+            if (idx >= 0) {
+              if (currentEl) currentEl.textContent = String(idx + 1).padStart(2, "0");
+              if (fillEl) fillEl.style.width = `${((idx + 1) / TOTAL_PAGES) * 100}%`;
+              dots.forEach((d, i) => d.classList.toggle("current", i === idx));
+            }
+          }
         }
-      });
-    }, { threshold: 0.15 });
-    frame.querySelectorAll("[data-page]").forEach(s => io.observe(s));
+      },
+      { root: scroller, threshold: 0.5 }
+    );
+    slides.forEach((s) => obs.observe(s));
 
-    return () => {
-      frame.removeEventListener("scroll", updateUI);
-      railDots?.removeEventListener("click", onDotClick);
-      document.removeEventListener("keydown", onKeyDown);
-      io.disconnect();
-    };
+    return () => obs.disconnect();
   }, []);
 
   return (
-    <main className="portfolio-shell">
-      <div className="progress-bar"><div className="progress-fill" /></div>
-      <aside className="progress-rail" aria-label="Portfolio pages">
+    <div className="portfolio-shell">
+      <div className="progress-bar">
+        <div className="progress-fill" ref={fillRef} />
+      </div>
+
+      <div className="slides-scroller" ref={scrollerRef} tabIndex={0}>
+        {SLIDES.map((slide) => {
+          const n = String(slide.page).padStart(2, "0");
+          const src = `/pdf-slides/pdfpage-${n}.png`;
+          const counter = `${n} / ${TOTAL_PAGES}`;
+
+          return (
+            <div key={slide.page}>
+              <div className="portfolio-slide">
+                <div className="pdf-slide-wrap">
+                  <img
+                    className="pdf-slide-img"
+                    src={src}
+                    alt={`Portfolio page ${slide.page}`}
+                    loading={slide.page <= 3 ? "eager" : "lazy"}
+                  />
+
+                  {/* Cover: bottom bar only to hide MMXXVI */}
+                  {slide.cover && (
+                    <div className="slide-bar slide-bar-bottom slide-bar-blank" />
+                  )}
+
+                  {/* Standard pages: top + bottom bars */}
+                  {!slide.plain && !slide.cover && (
+                    <>
+                      <div className={`slide-bar slide-bar-top${slide.imgCaption ? " slide-bar-tall" : ""}`}>
+                        <span>SOFIIA VAN DER VIR · PORTFOLIO 2026</span>
+                        <span className="bar-right-col">
+                          <span>{slide.headerRight}</span>
+                          {slide.imgCaption && (
+                            <span className="bar-img-caption">{slide.imgCaption}</span>
+                          )}
+                        </span>
+                      </div>
+                      <div className="slide-bar slide-bar-bottom">
+                        <span>{slide.footerLeft}</span>
+                        <span>{counter}</span>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <aside className="progress-rail">
         <span className="rail-label">SCROLL / NAVIGATE</span>
-        <span className="rail-current">01</span>
+        <span className="rail-current" ref={currentRef}>01</span>
         <div className="rail-dots">
-          {pages.map((page) => (
-            <button key={page.page} className={page.page === 1 ? "current" : ""} aria-label={`Go to page ${page.page}`} />
+          {SLIDES.map(({ page }) => (
+            <button
+              key={page}
+              aria-label={`Go to page ${page}`}
+              onClick={() => {
+                const scroller = scrollerRef.current;
+                if (!scroller) return;
+                const slides = scroller.querySelectorAll<HTMLElement>(".portfolio-slide");
+                slides[page - 1]?.scrollIntoView({ behavior: "smooth" });
+              }}
+            />
           ))}
         </div>
+        <a
+          className="rail-pdf-btn"
+          href="/portfolio.pdf"
+          download="Sofiia-Van-der-Vir-Portfolio-2026.pdf"
+          title="Portfolio als PDF herunterladen"
+        >
+          <svg viewBox="0 0 318.188 318.188" aria-hidden="true" fill="currentColor">
+            <g><g><g>
+              <path d="M283.149,52.722L232.625,2.197C231.218,0.79,229.311,0,227.321,0H40.342c-4.142,0-7.5,3.358-7.5,7.5v303.188c0,4.142,3.358,7.5,7.5,7.5h237.504c4.143,0,7.5-3.358,7.5-7.5V58.025C285.346,56.036,284.556,54.129,283.149,52.722z M234.821,25.607l24.918,24.919h-24.918V25.607z M47.842,15h171.98v10.263H47.842V15z M270.346,303.188H47.842V40.263h171.98v17.763c0,4.142,3.357,7.5,7.5,7.5h43.024V303.188z"/>
+              <path d="M201.704,147.048c-3.615-0.024-7.177,0.154-10.693,0.354c-1.296,0.087-2.579,0.199-3.861,0.31c-1.314-1.36-2.584-2.765-3.813-4.202c-7.82-9.257-14.134-19.755-19.279-30.664c1.366-5.271,2.459-10.772,3.119-16.485c1.205-10.427,1.619-22.31-2.288-32.251c-1.349-3.431-4.946-7.608-9.096-5.528c-4.771,2.392-6.113,9.169-6.502,13.973c-0.313,3.883-0.094,7.776,0.558,11.594c0.664,3.844,1.733,7.494,2.897,11.139c1.086,3.342,2.283,6.658,3.588,9.943c-0.828,2.586-1.707,5.127-2.63,7.603c-2.152,5.643-4.479,11.004-6.717,16.161c-1.18,2.557-2.335,5.06-3.465,7.507c-3.576,7.855-7.458,15.566-11.814,23.02c-10.163,3.585-19.283,7.741-26.857,12.625c-4.063,2.625-7.652,5.476-10.641,8.603c-2.822,2.952-5.69,6.783-5.941,11.024c-0.141,2.394,0.807,4.717,2.768,6.137c2.697,2.015,6.271,1.881,9.4,1.225c10.25-2.15,18.121-10.961,24.824-18.387c4.617-5.115,9.872-11.61,15.369-19.465c0.012-0.018,0.024-0.036,0.037-0.054c9.428-2.923,19.689-5.391,30.579-7.205c4.975-0.825,10.082-1.5,15.291-1.974c3.663,3.431,7.621,6.555,11.939,9.164c3.363,2.069,6.94,3.816,10.684,5.119c3.786,1.237,7.595,2.247,11.528,2.886c1.986,0.284,4.017,0.413,6.092,0.335c4.631-0.175,11.278-1.951,11.714-7.57c0.134-1.721-0.237-3.229-0.98-4.551C220.067,150.006,207.479,147.966,201.704,147.048z"/>
+              <path d="M158.594,233.392h-16.606v47.979h15.523c7.985,0,14.183-2.166,18.591-6.498c4.408-4.332,6.613-10.501,6.613-18.509c0-7.438-2.096-13.127-6.285-17.065C172.24,235.361,166.295,233.392,158.594,233.392z M166.503,267.309c-1.838,2.287-4.726,3.43-8.664,3.43h-2.888v-26.877h3.773c3.545,0,6.187,1.061,7.926,3.183c1.739,2.122,2.609,5.382,2.609,9.78C169.26,261.528,168.341,265.023,166.503,267.309z"/>
+              <path d="M129.78,237.363c-3.041-2.647-7.592-3.971-13.652-3.971H99.522v47.979h12.963v-15.917h3.643c5.819,0,10.309-1.46,13.472-4.381c3.161-2.92,4.742-7.061,4.742-12.421C134.341,243.773,132.821,240.01,129.78,237.363z M119.492,253.247c-1.149,1.094-2.697,1.641-4.644,1.641h-2.363v-11.026h3.348c3.588,0,5.382,1.619,5.382,4.857C121.214,250.643,120.64,252.153,119.492,253.247z"/>
+              <polygon points="191.314,281.371 204.08,281.371 204.08,263.354 218.454,263.354 218.454,252.951 204.08,252.951 204.08,243.795 219.669,243.795 219.669,233.392 191.314,233.392"/>
+            </g></g></g>
+          </svg>
+        </a>
       </aside>
-      <div ref={frameRef} className="slides-scroller" tabIndex={0}>
-        {pages.map((page) => (
-          <div key={page.page} data-page={page.page}>
-            <Slide page={page} />
-          </div>
-        ))}
-      </div>
-    </main>
+    </div>
   );
 }
